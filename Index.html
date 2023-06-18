@@ -10,6 +10,12 @@
     <h1>Hello, world</h1>
     <hr>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum quas mollitia nisi, nemo hic magni incidunt deleniti rerum reprehenderit id</p>
+    <input type="text" placeholder="Enter your name">
     <button>click me</button>
+    <script>
+        const btn = document.querySelector("buttun")
+        const inp = document.querySelector("input")
+        btn.addEventListener("click", () => console.log("Hello, " + inp.value))
+    </script>
 </body>
 </html>
