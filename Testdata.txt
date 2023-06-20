@@ -1,1 +1,1 @@
-Esiminch info for merge conflict which is gonna occur latetr on
+ERROR, CONFLICT
