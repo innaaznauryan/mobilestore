@@ -6,7 +6,7 @@ const phones = [
             price: 538900,
             brand: "Samsung",
             quantity: 19,
-            image: "S-23-Ultra.jpg"
+            image: "S-23-Ultra.png"
     },
     {
             id: 2,
@@ -45,7 +45,7 @@ const phones = [
         price: 75900,
         brand: "Samsung",
         quantity: 41,
-        image: "A14-(Light Green)"
+        image: "A14-(Light Green).png"
     },
     {
         id: 6,
@@ -54,7 +54,7 @@ const phones = [
         price: 58900,
         brand: "Samsung",
         quantity: 27,
-        image: "A04s-(Copper)"
+        image: "A04s-(Copper).png"
     },
     {
         id: 7,
@@ -63,7 +63,7 @@ const phones = [
         price: 160900,
         brand: "Samsung",
         quantity: 22,
-        image: "A54-(White)"
+        image: "A54-(White).png"
 
     },
     {
@@ -73,7 +73,7 @@ const phones = [
         price: 449900,
         brand: "Samsung",
         quantity: 8,
-        image: "S22-(Dark Red)"
+        image: "S22-(Dark Red).png"
 
     },
     {
@@ -83,7 +83,7 @@ const phones = [
         price: 242900,
         brand: "Samsung",
         quantity: 13,
-        image: "S21-(Light Violet)"
+        image: "S21-(Light Violet).png"
 
     },
     {
@@ -93,7 +93,8 @@ const phones = [
         price: 349900,
         brand: "Samsung",
         quantity: 15,
-        image: "S22+(Black)"
+        image: "S22+(Black).png"
 
     },
 ]
+
