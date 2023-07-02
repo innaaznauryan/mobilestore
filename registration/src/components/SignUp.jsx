@@ -1,19 +1,25 @@
-import React from 'react'
 import {Formik} from "formik"
-import { Schema } from '../validation/Schema.js'
+import {Schema} from '../validation/Schema.js'
+import {Context} from './ContextProvider'
+import {useContext, useRef} from 'react'
 
 let ID
 if (!localStorage.getItem("curUserId")) ID = 1
 else ID = +localStorage.getItem("curUserId")
 
 const SignUp = () => {
+    const [state, dispatch] = useContext(Context)
+    const formRef = useRef()
 
     const submitReg = (values, {setSubmitting}) => {
         setSubmitting(true)
+        dispatch({type: "updateKeys", payload: values})
+        console.log(values)
         localStorage.setItem("user" + ID, JSON.stringify(values))
         localStorage.setItem("curUserId", ++ID)
         setTimeout(() => {
             setSubmitting(false)
+            formRef.current.reset()
         }, 2000);
     }
 
@@ -30,7 +36,7 @@ const SignUp = () => {
         onSubmit={submitReg}
         validationSchema={Schema}>
         {({handleChange, handleSubmit, handleBlur, values, touched, errors, isSubmitting}) => {
-            return <form action="" onSubmit={handleSubmit}>
+            return <form action="" onSubmit={handleSubmit} ref={formRef}>
                 <div className="inputBox">
                     <input type="text" placeholder='First Name' name="fName" onChange={handleChange} onBlur={handleBlur}/>
                     {errors.fName && touched.fName && <span className='inputError'>{errors.fName}</span>}

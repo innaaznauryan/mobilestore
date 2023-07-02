@@ -1,15 +1,13 @@
-import React, { useRef } from 'react'
-import {Formik} from "formik"
-import { useReducer } from 'react'
+import { useRef } from 'react'
+import { Formik } from "formik"
 import { useNavigate } from 'react-router-dom'
+import { Context } from './ContextProvider'
+import { useContext } from 'react'
 
 const Login = () => {
 
+  const [state, dispatch] = useContext(Context)
   const navigate = useNavigate()
-  const reducer = (state, action) => {
-    return {...state, error: action.payload}
-  }
-  const [state, dispatch] = useReducer(reducer, {error: ""})
   const formRef = useRef()
 
   const submitLogin = ({email, password}, {resetForm}) => {
@@ -22,7 +20,7 @@ const Login = () => {
     data.forEach(elem => {
       if((elem.email == email && elem.password == password)) navigate("/")
       else {
-        dispatch({payload: "Wrong email or password"})
+        dispatch({type: "loginError", payload: "Wrong email or password"})
         formRef.current.reset()
       }
     })
@@ -38,7 +36,7 @@ const Login = () => {
           <input onChange={handleChange} onBlur={handleBlur} type="text" placeholder='Email' name="email"/>
           <input onChange={handleChange} onBlur={handleBlur} type="password" placeholder='Password' name="password"/>
           <input type="submit" value="Login"/>
-          {state.error && <div className='inputError'>{state.error}</div>}
+          {state.loginError && <div className='inputError'>{state.loginError}</div>}
         </form>
       }}
     </Formik>
