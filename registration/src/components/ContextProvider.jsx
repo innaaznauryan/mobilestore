@@ -3,22 +3,19 @@ import { useReducer, createContext } from 'react'
 export const Context = createContext(null)
 
 const reducer = (state, {type, payload}) => {
-    console.log(type, payload)
+    console.log(state)
+    // console.log({users: [...users, payload]})
     switch(type) {
         case "loginError":
             return {...state, loginError: payload}
         case "updateKeys":
-            return {...state, ...payload}
+            return {...state, users: [...state.users, payload]}
         default:
             return state
     }
 }
 const initialState = {
-    fName: "",
-    lName: "",
-    email: "",
-    password: "",
-    password2: "",
+    users: [],
     loginError: ""
 }
 

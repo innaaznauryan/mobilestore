@@ -13,8 +13,7 @@ const SignUp = () => {
 
     const submitReg = (values, {setSubmitting}) => {
         setSubmitting(true)
-        dispatch({type: "updateKeys", payload: values})
-        console.log(values)
+        dispatch({type: "updateKeys", payload: {userId: ID, ...values}})
         localStorage.setItem("user" + ID, JSON.stringify(values))
         localStorage.setItem("curUserId", ++ID)
         setTimeout(() => {
