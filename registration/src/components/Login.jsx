@@ -18,7 +18,10 @@ const Login = () => {
       if (key.startsWith("user")) data.push(JSON.parse(value))
     }
     data.forEach(elem => {
-      if((elem.email == email && elem.password == password)) navigate("/")
+      if((elem.email == email && elem.password == password)) {
+        dispatch({type: "activeUser", payload: {fName: elem.fName, lName: elem.lName, email: elem.email, password: elem.password}})
+        navigate("/")
+      }
       else {
         dispatch({type: "loginError", payload: "Wrong email or password"})
         formRef.current.reset()

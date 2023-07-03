@@ -4,19 +4,26 @@ export const Context = createContext(null)
 
 const reducer = (state, {type, payload}) => {
     console.log(state)
-    // console.log({users: [...users, payload]})
     switch(type) {
         case "loginError":
             return {...state, loginError: payload}
         case "updateKeys":
             return {...state, users: [...state.users, payload]}
+        case "activeUser":
+            return {...state, activeUser: payload}
         default:
             return state
     }
 }
 const initialState = {
     users: [],
-    loginError: ""
+    loginError: "",
+    activeUser: {
+        fName: "",
+        lName: "",
+        email: "",
+        password: ""
+    }
 }
 
 const ContextProvider = (props) => {
