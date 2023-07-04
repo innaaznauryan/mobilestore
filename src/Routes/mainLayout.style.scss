@@ -1,0 +1,39 @@
+nav {
+    height: 8vmin;
+    padding-inline: 15px;
+    border-bottom: 1px solid #c9c9c9;
+    margin-bottom: 20px;
+    background-color: #f6f6f6;
+    display: flex;
+    > a > img {
+        height: 100%;
+        
+    }
+}
+
+ul {
+    flex: 1;
+    display: flex;
+    gap: 0.5vmin;
+    justify-content: center;
+    align-items: center;
+    
+    ;
+
+    li {
+        list-style-type: none;
+        // border: 1px solid black;
+        width: 80px;
+        text-align: center;
+        
+    }
+
+    a {
+        text-decoration: none;
+        color: #242424;
+        font-size: clamp(14px, 3vw, 22px);
+        &.active {
+            font-weight: 700;
+        }
+    }
+}

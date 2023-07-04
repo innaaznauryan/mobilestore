@@ -1,0 +1,17 @@
+.bottom {
+    * {
+        box-shadow: none;
+    }
+border-radius: none;
+width: 100%;
+&>div {
+    border-radius: 0;
+    color: #242424;
+    width: 100%;
+    p {
+        color: #242424;
+
+    }
+}
+
+}
