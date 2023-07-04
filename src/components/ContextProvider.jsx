@@ -1,6 +1,19 @@
 import { useReducer, createContext } from 'react'
 
-export const Context = createContext(null)
+
+const initialState = {
+    users: [],
+    loginError: "",
+    activeUser: {
+        fName: "",
+        lName: "",
+        email: "",
+        password: ""
+    }
+}
+
+
+export const Context = createContext(initialState)
 
 const reducer = (state, {type, payload}) => {
     console.log(state)
@@ -15,23 +28,14 @@ const reducer = (state, {type, payload}) => {
             return state
     }
 }
-const initialState = {
-    users: [],
-    loginError: "",
-    activeUser: {
-        fName: "",
-        lName: "",
-        email: "",
-        password: ""
-    }
-}
 
-const ContextProvider = (props) => {
+
+const ContextProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
     <Context.Provider value={[state, dispatch]}>
-        {props.children}
+        {children}
     </Context.Provider>
   )
 }

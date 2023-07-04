@@ -11,7 +11,7 @@ return (
     <div className='phone-container'>{data.filter(phone => phone.brandId == brand.at(-1))
         
         .map(({id, brand, image, model, price, quantity, year}) => {
-     return <div  className="phone">
+     return <div key={id} className="phone">
      <Link key={id} to="single" state={{id, brand, image, model, price, quantity, year}}>
         <h4>{brand}</h4>
 

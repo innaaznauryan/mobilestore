@@ -6,7 +6,11 @@ import { useContext } from 'react'
 
 const Login = () => {
 
-  const [state, dispatch] = useContext(Context)
+  
+  
+
+
+  const [{state}, dispatch] = useContext(Context)
   const navigate = useNavigate()
   const formRef = useRef()
 

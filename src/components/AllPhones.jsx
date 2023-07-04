@@ -4,7 +4,7 @@ import "./allphones.style.scss"
 
 const AllPhones = () => {
 const [phones, setPhones] = useState(data)
-console.log(data)
+
   return (
     <div className='phone-container'>{phones.map(({id, brand, image, model, price, quantity, year}) => {
      return <div key={id} className="phone">
