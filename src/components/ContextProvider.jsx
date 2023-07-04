@@ -9,7 +9,8 @@ const initialState = {
         lName: "",
         email: "",
         password: ""
-    }
+    },
+    loggedIn: false
 }
 
 
@@ -19,11 +20,19 @@ const reducer = (state, {type, payload}) => {
     console.log(state)
     switch(type) {
         case "loginError":
-            return {...state, loginError: payload}
+            return {...state,   
+            activeUser: {
+                fName: "",
+                lName: "",
+                email: "",
+                password: ""
+            }, 
+            loginError: payload, 
+            loggedIn: false}
         case "updateKeys":
             return {...state, users: [...state.users, payload]}
         case "activeUser":
-            return {...state, activeUser: payload}
+            return {...state, activeUser: payload, loginError: "", loggedIn: true}
         default:
             return state
     }

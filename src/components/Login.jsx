@@ -6,11 +6,7 @@ import { useContext } from 'react'
 
 const Login = () => {
 
-  
-  
-
-
-  const [{state}, dispatch] = useContext(Context)
+  const [state, dispatch] = useContext(Context)
   const navigate = useNavigate()
   const formRef = useRef()
 
@@ -21,6 +17,13 @@ const Login = () => {
       const value = localStorage.getItem(key)
       if (key.startsWith("user")) data.push(JSON.parse(value))
     }
+    // if we don't sign up a user and localStorage is empty use this data for Valod
+    if (data.length == 0) data.push({
+      fName: "Valod",
+      lName: "Kirakosyan",
+      email: "valod@mail.ru", 
+      password: "boo123"
+    })
     data.forEach(elem => {
       if((elem.email == email && elem.password == password)) {
         dispatch({type: "activeUser", payload: {fName: elem.fName, lName: elem.lName, email: elem.email, password: elem.password}})
