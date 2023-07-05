@@ -23,6 +23,10 @@ const App = () => {
         <Route index element={<PhoneInfo/>}/>
         <Route path='pics' element={<PhonePics/>}/>
       </Route>
+      <Route path='/single' element={<SinglePhone/>}>
+        <Route index element={<PhoneInfo/>}/>
+        <Route path='pics' element={<PhonePics/>}/>
+      </Route>
       <Route path='login' element={<Login/>}/>
   </Route>
 </Routes>
