@@ -18,9 +18,11 @@ const App = () => {
 
 
 <Routes>
-  <Route element={<MainLayout/>}>
+    
+    {/* <Route path='/error' element={<Error/>} />  */}
+  <Route path='/' element={<MainLayout/>}>
   
-      <Route path='/' element={<AllPhones/>}/>
+      <Route index element={<AllPhones/>}/>
       <Route path=':brand' element={<ByBrand/>}/>
       <Route path=':brand/single' element={<SinglePhone/>}>
         <Route index element={<PhoneInfo/>}/>
@@ -31,11 +33,9 @@ const App = () => {
       
       
   </Route>
-  
+<Route path='*' element={<Error/>} /> 
 </Routes>
-<Routes>
-<Route path='*' element={<Error/>} />
-</Routes>
+
     
     
     

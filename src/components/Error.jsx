@@ -1,83 +1,35 @@
-import React, { useEffect, useReducer, useRef} from 'react'
+import React, { useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./error.style.scss"
 
-const reducer = (state, action) => {
-    if(action.type == "timer"){
-      
-      if(state.seconds <= 0 ) {
-        backHome()
-        
-
-         return state
-      }
-
-      
-        return {seconds: state.seconds - 1}
-     
-     
-    }
-    
-}
-
-function backHome(){
-  location.assign("/")
-}
 
 
 const Error = () => {
-  const initialState = {
-    seconds:5,
-    
 
-  }
+const [timer, setTimer] = useState(5)
+const goSomewhere = useNavigate()
 
-  const [state, dispatch] = useReducer(reducer, initialState)
-  const divRef = useRef(null)
-   let timer = null  
-  const handleClick = () => {
-    if(state.seconds){
-      clearInterval(timer)
-      timer = null
-      divRef.current.innerText = ""
-    }
-    
-    } 
+useEffect(()=> {
 
-  useEffect(()=> {
-    
+  const interval = setInterval(setTimer, 1000, timer - 1)
+if(timer == 0) {
+  clearInterval(interval)
+  goSomewhere("/")
+}
+  return ()=> clearInterval(interval)
 
-   timer = setTimeout(() => {
-    
-   
-    dispatch({
-      type:"timer"
+}, [timer])
 
-    
-   })
-   
-    
-    
-  
-  }, 1000)
+console.log("ERROR")
+   return (
 
-    
- 
-    
-      
-    
-   
-  }, [initialState])
-
- 
-
-  return (
-    <div className='cont'>
+     <div className='cont'>
       <div className='time'>
-        <div ref={divRef}>
+        <div>
         <p>After 5 seconds, you will be automatically transferred to the main page, if you do not want the transfer to take place, click "Cancel"</p>
-        <h2>{state.seconds}</h2>
+        <h2>{timer}</h2>
       
-      <button onClick={handleClick}>Cancel</button>
+      <button>Cancel</button>
         </div>
        
      
@@ -93,7 +45,9 @@ const Error = () => {
         
         
     </div>
-  )
-}
 
-export default Error
+   )
+ }
+ 
+ export default Error
+
