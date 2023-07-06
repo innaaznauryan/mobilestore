@@ -29,13 +29,10 @@ const App = () => {
         <Route path='pics' element={<PhonePics/>}/>
         
       </Route>
-      <Route path='login' element={<Login/>}/> 
-      
-      
+
   </Route>
 <Route path='*' element={<Error/>} /> 
 </Routes>
-
     
     
     

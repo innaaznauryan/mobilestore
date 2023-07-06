@@ -11,7 +11,7 @@ const SinglePhone = () => {
   return (
     <div className="single">
         <h1>{brand}</h1>
-        <Link relative="path" to="..">Go back</Link>
+        <Link relative="path" to=".." state={customState}>Go back</Link>
         <hr />
         <img src={`/src/assets/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
 
