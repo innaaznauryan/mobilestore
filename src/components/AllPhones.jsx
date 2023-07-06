@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
+import Rating from "./Rating"
 import data from "../assets/Phones_Data_Storage/sources/storage.json"
 import "./allphones.style.scss"
 
@@ -8,8 +9,9 @@ const [phones, setPhones] = useState(data)
 
   return (
     <div className='phone-container'>{phones.map(({id, brand, image, model, price, quantity, year}) => {
-     return <Link key={id} to="single" state={{id, brand, image, model, price, quantity, year}}>
-      <div className="phone">
+    return <>
+     <Link key={id} to="single" state={{id, brand, image, model, price, quantity, year}}>
+        <div className="phone">
           <h4>{brand}</h4>
           <h2>{model}</h2>
           <img src={`src/assets/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
@@ -17,6 +19,12 @@ const [phones, setPhones] = useState(data)
         </div>
      </Link>
 
+      <div className="bottom">
+        <div className="year">Model year: {year}</div>
+        <Rating id={id}/>
+        <p>{price}</p>
+      </div>
+    </>
     })}</div>
   )
 }
