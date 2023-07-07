@@ -18,23 +18,20 @@ const App = () => {
 
 
 <Routes>
-  <Route element={<MainLayout/>}>
+    
+    {/* <Route path='/error' element={<Error/>} />  */}
+  <Route path='/' element={<MainLayout/>}>
   
-      <Route path='/' element={<AllPhones/>}/>
+      <Route index element={<AllPhones/>}/>
       <Route path=':brand' element={<ByBrand/>}/>
       <Route path=':brand/single' element={<SinglePhone/>}>
         <Route index element={<PhoneInfo/>}/>
         <Route path='pics' element={<PhonePics/>}/>
         
       </Route>
-      <Route path='login' element={<Login/>}/> 
-      
-      
+
   </Route>
-  
-</Routes>
-<Routes>
-<Route path='*' element={<Error/>} />
+<Route path='*' element={<Error/>} /> 
 </Routes>
     
     
