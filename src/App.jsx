@@ -7,28 +7,38 @@ import SinglePhone from './components/SinglePhone'
 import Login from './components/Login'
 import PhoneInfo from './components/PhoneInfo'
 import PhonePics from './components/PhonePics'
+import Error from './components/Error'
 
 
 const App = () => {
   return (
+  
     <main>
 
 
 
 <Routes>
-  <Route element={<MainLayout/>}>
-      <Route path='/' element={<AllPhones/>}/>
+    
+    {/* <Route path='/error' element={<Error/>} />  */}
+  <Route path='/' element={<MainLayout/>}>
+  
+      <Route index element={<AllPhones/>}/>
       <Route path=':brand' element={<ByBrand/>}/>
       <Route path=':brand/single' element={<SinglePhone/>}>
         <Route index element={<PhoneInfo/>}/>
         <Route path='pics' element={<PhonePics/>}/>
+        
       </Route>
-      <Route path='login' element={<Login/>}/>
-  </Route>
-</Routes>
 
+  </Route>
+<Route path='*' element={<Error/>} /> 
+</Routes>
+    
+    
     
     </main>
+    
+    
   )
 }
 

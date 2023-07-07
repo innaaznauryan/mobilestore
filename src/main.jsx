@@ -5,11 +5,13 @@ import './index.css'
 import {BrowserRouter} from "react-router-dom"
 import ContextProvider from './components/ContextProvider'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <ContextProvider>
         <App />
+        
      </ContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
