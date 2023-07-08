@@ -9,6 +9,7 @@ import PhoneInfo from './components/PhoneInfo'
 import PhonePics from './components/PhonePics'
 import Error from './components/Error'
 import Secret from './components/Secret'
+import Exit from './components/Exit'
 
 
 
@@ -32,9 +33,9 @@ const App = () => {
         
         
       </Route>
-    <Route path='login' element={<Login/>}></Route>
-    <Route path='secret' element={<Secret/>} />
-   
+    <Route path='login' element={<Login/>}/>
+    <Route path='secret' element={<Secret/>}/>
+    
   </Route>
 <Route path='*' element={<Error/>} /> 
 </Routes>
