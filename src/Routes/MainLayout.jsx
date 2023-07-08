@@ -33,7 +33,9 @@ const MainLayout = () => {
           <NavLink className={({isActive})=> isActive? "active" : ""} to="/phone3">Motorola</NavLink>
         </li>
         </ul>
+        <Link to="/secret"><button>Secret</button></Link>
     </nav>
+    
     <Outlet/>
 </>
   )

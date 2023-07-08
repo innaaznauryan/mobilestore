@@ -55,3 +55,19 @@ ul {
     backdrop-filter: blur(3px);
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.564);
 }
+
+button{
+    position: absolute;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    top: 5px;
+    right: 150px;
+    display: grid;
+    place-content: center;
+    z-index: 1;
+    backdrop-filter: blur(3px);
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.564);
+    cursor: pointer;
+   
+}

@@ -8,6 +8,7 @@ import Login from './components/Login'
 import PhoneInfo from './components/PhoneInfo'
 import PhonePics from './components/PhonePics'
 import Error from './components/Error'
+import Secret from './components/Secret'
 
 
 
@@ -15,7 +16,7 @@ const App = () => {
   return (
   
     <main>
-
+       
 
 
 <Routes>
@@ -29,8 +30,10 @@ const App = () => {
         <Route index element={<PhoneInfo/>}/>
         <Route path='pics' element={<PhonePics/>}/>
         
+        
       </Route>
     <Route path='login' element={<Login/>}></Route>
+    <Route path='secret' element={<Secret/>} />
    
   </Route>
 <Route path='*' element={<Error/>} /> 

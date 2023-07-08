@@ -10,14 +10,15 @@ import RedirectHome from './RedirectHome'
 const Login = () => {
 
   const [state, dispatch] = useContext(Context)
+  
   const navigate = useNavigate()
   const formRef = useRef()
-  
+
 
   const submitLogin = ({email, password}, {resetForm}) => {
     const data = []
-    console.log(data)
-    const Context = createContext(data)
+    
+
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i)
       const value = localStorage.getItem(key)
@@ -38,18 +39,16 @@ const Login = () => {
       else {
         dispatch({type: "loginError", payload: "Wrong email or password"})
         formRef.current.reset()
-        return <RedirectHome/>
+        
       }
     })
-    
-  
+
+  localStorage.setItem("loggedIn", state.loggedIn)
   }
 
   return ( 
   <>
-  <Context.Provider value={Context}>
-  <RedirectHome/>
-  </Context.Provider>
+  
     <Formik
     initialValues={{email: "", password: ""}}
     onSubmit={submitLogin}>

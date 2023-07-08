@@ -17,7 +17,7 @@ const initialState = {
 export const Context = createContext(initialState)
 
 const reducer = (state, {type, payload}) => {
-    console.log(state)
+  
     switch(type) {
         case "loginError":
             return {...state,   
