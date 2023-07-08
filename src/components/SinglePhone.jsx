@@ -1,4 +1,5 @@
 import {useLocation, Link, Outlet} from "react-router-dom"
+import Rating from "./Rating"
 import "./singlePhone.style.scss"
 
 
@@ -14,10 +15,9 @@ const SinglePhone = () => {
         <Link relative="path" to=".." state={customState}>Go back</Link>
         <hr />
         <img src={`/src/assets/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
-
+        <Rating id={id} />
 
       <Link state={customState} to=".">Info </Link> 
-
       <Link state={customState} to="pics">Pics</Link>
       <Outlet context={{description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tenetur voluptate eius. Inventore quidem delectus cum at, officia quas iure tempore deserunt, id accusamus deleniti vitae ex recusandae, numquam distinctio.",
     price, year, model}}/>

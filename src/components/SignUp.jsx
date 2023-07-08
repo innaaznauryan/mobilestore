@@ -1,5 +1,5 @@
 import {Formik} from "formik"
-import {Schema} from '../validation/Schema.js'
+import {Schema} from './validation/Schema'
 import {Context} from './ContextProvider'
 import {useContext, useRef} from 'react'
 

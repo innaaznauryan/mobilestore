@@ -35,7 +35,6 @@ const average = (string) => {
         if(string.length == 1) return +string
         const arr = string.split("")
         const rating = arr.reduce((acc, elem) => +acc + +elem) / arr.length
-        console.log(rating)
         return rating
     }
     return 0
