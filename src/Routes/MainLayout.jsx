@@ -5,8 +5,7 @@ import logo from "../assets/logo.png"
 
 const MainLayout = () => {
 
-   
-
+  
   return (
 
 <>

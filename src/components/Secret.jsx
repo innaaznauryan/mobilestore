@@ -5,11 +5,11 @@ import  RedirectHome  from './RedirectHome'
 
 const Secret = () => {
 
-    if(localStorage.getItem("loggedIn") != "true"){
-        return <RedirectHome/>
+    if(localStorage.getItem("loggedIn")){
+        return <div>Secret</div>
   
     } else {
-        return <div>Secret</div>
+        return <RedirectHome/>
     }
   
 }
