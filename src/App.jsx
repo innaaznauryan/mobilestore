@@ -10,6 +10,7 @@ import PhonePics from './components/PhonePics'
 import Error from './components/Error'
 
 
+
 const App = () => {
   return (
   
@@ -29,7 +30,8 @@ const App = () => {
         <Route path='pics' element={<PhonePics/>}/>
         
       </Route>
-
+    <Route path='login' element={<Login/>}></Route>
+   
   </Route>
 <Route path='*' element={<Error/>} /> 
 </Routes>
