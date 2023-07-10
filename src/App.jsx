@@ -19,12 +19,12 @@ const App = () => {
 
 <Routes>
     
-    {/* <Route path='/error' element={<Error/>} />  */}
+  
   <Route path='/' element={<MainLayout/>}>
   
       <Route index element={<AllPhones/>}/>
-      <Route path=':brand' element={<ByBrand/>}/>
-      <Route path=':brand/single' element={<SinglePhone/>}>
+      <Route path='products/:brand' element={<ByBrand/>}/>
+      <Route path='products/:brand/single' element={<SinglePhone/>}>
         <Route index element={<PhoneInfo/>}/>
         <Route path='pics' element={<PhonePics/>}/>
         

@@ -5,20 +5,21 @@ import "./singlePhone.style.scss"
 const SinglePhone = () => {
 
 
-  const customState = useLocation().state
-  console.log(customState)
-  const {id, brand, image, model, price, quantity, year} = customState
+  const loc = useLocation()
+  console.log(loc)
+  const {id, brand, image, model, price, quantity, year} = loc.state
+  
   return (
     <div className="single">
         <h1>{brand}</h1>
-        <Link relative="path" to=".." state={customState}>Go back</Link>
+        <Link relative="path" to="..">Go back</Link>
         <hr />
-        <img src={`/src/assets/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
+        <img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
 
 
-      <Link state={customState} to=".">Info </Link> 
+      <Link state={loc.state} to=".">Info </Link> 
 
-      <Link state={customState} to="pics">Pics</Link>
+      <Link state={loc.state} to="pics">Pics</Link>
       <Outlet context={{description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tenetur voluptate eius. Inventore quidem delectus cum at, officia quas iure tempore deserunt, id accusamus deleniti vitae ex recusandae, numquam distinctio.",
     price, year, model}}/>
 

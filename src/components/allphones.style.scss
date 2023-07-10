@@ -11,7 +11,7 @@
         text-decoration: none;
     }
     
-    div {
+    div:not(.rating) {
         
         margin: auto;
         width: 100%;
@@ -41,10 +41,6 @@
             margin-block: 20px 8px;
           font-size: 18px;
             color: rgb(132, 131, 131);
-        }
-
-        img {
-            
         }
 
     
