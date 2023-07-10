@@ -1,0 +1,109 @@
+// .single {
+//     position: relative;
+    
+// }
+
+.single_phone {
+    padding: 20px 35px;
+
+    h1, h2 {
+        color: crimson;
+        text-align: center;
+
+        span {
+            color: #551A8B;
+        }
+    }
+    h1 {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        &.active {
+            font-weight: 700;
+            color: crimson;
+        }
+        button {
+            padding: 5px 15px;
+            margin-block: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(79, 207, 207, 0.424);
+                border-color: crimson;
+            }
+        }
+    }
+
+    .desc_img {
+        // place-items: center;
+
+        .info_div {
+            display: grid;
+
+            span {
+                color: crimson;
+                font-size: 22px;
+                margin-right: 20px;
+                font-weight: 400;
+            }
+    
+            p {
+                font-size: 22px;
+                line-height: 30px;
+                color: rgba(0, 0, 0, 0.5)
+            }
+
+            .price {
+                h3 {
+                    margin-block: 10px;
+                    font-size: 22px;
+                    color: rgb(78, 116, 116);
+                }
+            }
+
+        }
+        .image_div {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #F5F5DC;
+            cursor: pointer;
+            img {
+                width: 40%;
+                background-color: beige;
+            }
+
+            button {
+                padding: 5px 20px;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                align-self: center;
+                display: grid;
+                place-content: center;
+                background-color: coral;
+                font-size: 18px;
+                font-weight: 700;
+                color: rgb(11, 74, 74);
+                cursor: pointer;
+            }
+
+        }
+        
+        .pics_container {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+                margin-inline: 10px;
+            }
+        }
+    }
+
+}
