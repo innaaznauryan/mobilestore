@@ -1,6 +1,6 @@
 import {Route, Outlet, NavLink, Link} from "react-router-dom"
 import "./mainLayout.style.scss"
-// import logo from "../assets/logo.png" 
+import logo from "../assets/Logo.png" 
 
 
 const MainLayout = () => {
@@ -13,7 +13,7 @@ const MainLayout = () => {
 </div>  
 </Link>
     <nav>
-      {/* <Link to="/"><img src={logo} alt="" /></Link> */}
+      <Link to="/"><img src={logo} alt="" /></Link>
         <ul>
 
 
