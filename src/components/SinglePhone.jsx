@@ -5,9 +5,8 @@ import "./singlePhone.style.scss"
 const SinglePhone = () => {
 
 
-  const loc = useLocation()
-  console.log(loc)
-  const {id, brand, image, model, price, quantity, year} = loc.state
+  const customState = useLocation().state
+  const {id, brand, image, model, price, quantity, year} = customState
   
   return (
     <div className="single">
@@ -17,9 +16,9 @@ const SinglePhone = () => {
         <img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
 
 
-      <Link state={loc.state} to=".">Info </Link> 
+      <Link state={customState} to=".">Info </Link> 
 
-      <Link state={loc.state} to="pics">Pics</Link>
+      <Link state={customState} to="pics">Pics</Link>
       <Outlet context={{description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tenetur voluptate eius. Inventore quidem delectus cum at, officia quas iure tempore deserunt, id accusamus deleniti vitae ex recusandae, numquam distinctio.",
     price, year, model}}/>
 

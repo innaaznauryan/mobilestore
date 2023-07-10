@@ -53,8 +53,15 @@
     img {
         width: 90%;
     }
+
+    
 }
 
 
 
 
+dialog > form {
+    input:not([type='checkbox']) {
+        display: block;
+    }
+}
