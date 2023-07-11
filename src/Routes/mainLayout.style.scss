@@ -55,3 +55,19 @@ ul {
     backdrop-filter: blur(3px);
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.564);
 }
+
+dialog {
+
+    width: 450px;
+    height: 450px;
+    inset: 0;
+    margin: auto;
+    padding: 24px;
+   form {
+     * {
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 10px;
+     }
+   } 
+}
