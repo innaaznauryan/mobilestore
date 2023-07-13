@@ -1,6 +1,10 @@
 import {Route, Outlet, NavLink, Link} from "react-router-dom"
 import "./mainLayout.style.scss"
 import logo from "../assets/Logo.png" 
+import AboutUs from "./Info/AboutUs"
+import OurValues from "./Info/OurValues"
+import Counter from "../components/Counter"
+import NewLogin from "../components/NewLogin"
 
 
 const MainLayout = () => {
@@ -9,11 +13,11 @@ const MainLayout = () => {
 <>
 
 
-<Link to="/login">
-<div className="loginDiv">
-  <h2>Login</h2>
-</div>  
-</Link>
+    <Link to="/login">
+      <div className="loginDiv">
+        <h2>Login</h2>
+      </div>  
+    </Link>
     <nav>
       <Link to="/"><img src={logo} alt="" /></Link>
         <ul>
@@ -36,6 +40,14 @@ const MainLayout = () => {
         </li>
         </ul>
     </nav>
+    <aside>
+
+      <Counter/>
+      <NewLogin/>
+
+      <AboutUs/>
+      <OurValues/>
+    </aside>
     <Outlet/>
 </>
   )

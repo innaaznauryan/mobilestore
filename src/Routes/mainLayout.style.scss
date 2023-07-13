@@ -1,3 +1,35 @@
+aside {
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    background-color: rgb(200, 200, 200);
+    z-index: 3;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+
+
+.acc {
+    --h: 200px;
+    background-color: red;
+    overflow: hidden;
+    transition: max-height 350ms ease;
+    max-height: 0px;
+    height: var(--h);
+}
+.acc.open {
+    max-height: var(--h);
+
+
+
+}
+
+
 nav {
     height: 8vmin;
     padding-inline: 15px;
@@ -9,6 +41,8 @@ nav {
         height: 100%;
         
     }
+    position: relative;
+    z-index: 5;
 }
 
 ul {
@@ -71,3 +105,5 @@ dialog {
      }
    } 
 }
+
+
