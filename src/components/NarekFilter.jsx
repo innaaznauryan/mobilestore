@@ -19,15 +19,23 @@ const NarekFilter = ({fn, data}) => {
     }, [])
 
 
-
 function handleDialogSubmit (e){
 
     const objData = new FormData(e.target)
+    const newObj = {...Object.fromEntries([...objData])}
 
+    if (!e.target.min.value) newObj.min = -Infinity
+    if (!e.target.max.value) newObj.max = Infinity
 
   const boo = data.filter((elem) =>  {
- console.log([...objData.values()])
-    return +elem.price > +e.target.min.value && +elem.price < +e.target.max.value && [...objData.values()].includes(elem.brandId.toString())
+
+  if (![...objData.values()].find(elem => elem.startsWith("phone")))
+    return +elem.price > +newObj.min && +elem.price < +newObj.max
+
+  else return +elem.price > +newObj.min && +elem.price < +newObj.max && [...objData.values()].includes("phone" + elem.brandId)
+
+
+  // return +elem.price > +e.target.min.value && +elem.price < +e.target.max.value && [...objData.values()].includes("phone" + elem.brandId)
 }) 
 
 
@@ -44,8 +52,8 @@ function handleDialogSubmit (e){
         <form onSubmit={handleDialogSubmit} action="" method="dialog">
 
 
-    <input value={20000} type="number" name='min' placeholder='Min' />
-    <input value={88500} type="number" name='max' placeholder='Max' />
+    <input type="number" name='min' placeholder='Min' />
+    <input type="number" name='max' placeholder='Max' />
 
     
     <div className="phoneDiv">
