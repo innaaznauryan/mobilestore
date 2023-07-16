@@ -1,19 +1,22 @@
 import {useLocation, Link, Outlet} from "react-router-dom"
+import { useContext } from "react"
+import {SinglePhoneContext} from "./Context/PhoneContext"
 import "./singlePhone.style.scss"
 
 
 const SinglePhone = () => {
 
-
+  const [state, dispatch] = useContext(SinglePhoneContext)
   const customState = useLocation().state
   const {id, brand, image, model, price, quantity, year} = customState
-  
+console.log(state)
+
   return (
     <div className="single">
         <h1>{brand}</h1>
         <Link relative="path" to="..">Go back</Link>
         <hr />
-        <img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
+        {state ? (<img src={`/Phones_Data_Storage/images/${brand}/${state}`} alt="" />) : (<img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />)}
 
 
       <Link state={customState} to=".">Info </Link> 
