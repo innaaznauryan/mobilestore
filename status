@@ -1,0 +1,342 @@
+[33mcommit 5a43096ae21b03b3986a9df6a60c98ee492500ab[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Fri Jul 14 14:33:36 2023 +0400
+
+    updated filter if u dont mind
+
+[33mcommit 2592602f371899514722dfff98f01046d78df08e[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Thu Jul 13 12:45:14 2023 +0400
+
+    HOC practice
+
+[33mcommit e155829849b7ed16fadf25442208e6f0d7acc5aa[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 11 13:00:21 2023 +0400
+
+    narekfilter
+
+[33mcommit d4c461d8124ffea340d5e4a3361ae354a6226b06[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 11 02:56:56 2023 +0400
+
+    fixed loc
+
+[33mcommit aeb1f1f3c366983c27218379bf943ec7b8a2b536[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 11 02:42:14 2023 +0400
+
+    logo
+
+[33mcommit 848e36b59941046e868729bc7598e9f918f26333[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 11 02:30:48 2023 +0400
+
+    timelapse
+
+[33mcommit 476cf2dabab119357c7fc730414859f5a0b2fe42[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 11 01:42:23 2023 +0400
+
+    plock
+
+[33mcommit a2f8f7acc1e11f8a45f27bcc68711b4db93b0aff[m[33m ([m[1;31morigin/narek[m[33m)[m
+Merge: c7e0603 04fa2c7
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Thu Jul 6 11:36:35 2023 +0400
+
+    resolved
+
+[33mcommit c7e06036ec377a399f71ef470dabd8974fd8a5b8[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Thu Jul 6 11:33:13 2023 +0400
+
+    Fixed timer of Lernik
+
+[33mcommit 04fa2c7e2c9fb71c1b164a6a6cfc2f6bcfbbe2c2[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jul 5 18:03:41 2023 +0400
+
+    added rate stars and some navigation between bybrand singlephone and allphones
+
+[33mcommit 8d775c11f1ed8946acc18b811aeabe2b0f65b664[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Tue Jul 4 21:02:22 2023 +0400
+
+    added default login data
+
+[33mcommit dbc6d48c2f56fe802fb7ccccef5aef242debf6e0[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 4 12:41:59 2023 +0400
+
+    esiminch from the classroom
+
+[33mcommit 72082b505e5af363dfd89a6d34b462eee33575ba[m
+Merge: 24ba0b7 6eeebf2
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 4 11:08:37 2023 +0400
+
+    Merge branch 'inna'
+
+[33mcommit 24ba0b79a9cf9ab73129e9cb32970e4016d1f697[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jul 4 08:18:19 2023 +0400
+
+    a bit of an update
+
+[33mcommit 6eeebf28ccbb171b3678e9c2e86f4fd956a3d4a8[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Mon Jul 3 21:17:21 2023 +0400
+
+    active user
+
+[33mcommit 774a5a53de33ed210febfc6733511ef29d8c7a29[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Sun Jul 2 16:14:59 2023 +0400
+
+    fixed multiple users in contextprovider
+
+[33mcommit 0a0839a65d01c9ca07113727c6414d44b52cc713[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Sun Jul 2 15:37:55 2023 +0400
+
+    usecontext created
+
+[33mcommit c7dd30c4ca27273e357af1b8155a305efbac0d36[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Sun Jul 2 13:13:22 2023 +0400
+
+    deleted old Index
+
+[33mcommit 600b65f6f24d0376ed21cf804f9c199a2ae59abe[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Sun Jul 2 12:04:04 2023 +0400
+
+    login signup created
+
+[33mcommit 5a0b05454d4d9dbf6a60e0181196fe4255dd8a3c[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Sun Jul 2 11:53:22 2023 +0400
+
+    created vite project ins dependencies
+
+[33mcommit bdd35e460fdf0e1720a382aa2e4e89f6c6cfa25a[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Sun Jul 2 11:15:14 2023 +0400
+
+    delete all
+
+[33mcommit 203c09102dbbebf736433e65239302d6fe2dce2f[m
+Author: Lerno <baghdasaryan-lernik@mail.ru>
+Date:   Tue Jun 27 20:38:06 2023 +0400
+
+    a lot of work was done
+
+[33mcommit 9cb2b027609f9a2e4f0620d1befc976bc8592ccf[m
+Author: Lerno <baghdasaryan-lernik@mail.ru>
+Date:   Tue Jun 27 12:12:07 2023 +0400
+
+    added some packages
+
+[33mcommit ff7e7c9094450c9a09824d187ddba7899e8c0aec[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Tue Jun 27 08:14:00 2023 +0400
+
+    added images
+
+[33mcommit f9632bb06faec8aef23f224561a7c07bbfd8f8fe[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Mon Jun 26 19:15:37 2023 +0400
+
+    added Nokia phones
+
+[33mcommit 83d4857b42741210b59855e7b2962d3924eb944a[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Thu Jun 22 11:40:19 2023 +0400
+
+    Valod's chonicles
+
+[33mcommit 6c350dbff1b6018a35586c4f99f97e248bfc3112[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 18:33:03 2023 +0400
+
+    amendment
+
+[33mcommit 9b9b45effa38d115dc9859b40e0d10345205a537[m
+Merge: a844348 aa3b671
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 18:12:27 2023 +0400
+
+    resolved conflict
+
+[33mcommit a8443488a0bc5eb979ea0591cda4a5c957756e10[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 18:05:24 2023 +0400
+
+    amended commit
+
+[33mcommit aa3b671f31ac1ee6c110e5358d5132155428538b[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 18:05:24 2023 +0400
+
+    to be ammended
+
+[33mcommit a8eea121a224bd2485234550dfef11e6e7e15725[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 17:44:18 2023 +0400
+
+    commit will be restored
+
+[33mcommit d2df0fad456e25011b8bf5482ad9922ae7e3f8d1[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 17:20:53 2023 +0400
+
+    Now I see how commit is reverted
+    
+    This reverts commit b626e09edd8022bebdf58254cdf9e1aa7856f00d.
+
+[33mcommit b626e09edd8022bebdf58254cdf9e1aa7856f00d[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 17:20:00 2023 +0400
+
+    this commit will be reverted too
+
+[33mcommit 8fd6ded8ee284f0b69cb4d4fda29fe8c9ecbbea7[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 17:17:38 2023 +0400
+
+    Revert "this commit will be reverted"
+    
+    This reverts commit c6f8519946306080511091ea2b80f392696bcc8b.
+
+[33mcommit c6f8519946306080511091ea2b80f392696bcc8b[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 17:08:23 2023 +0400
+
+    this commit will be reverted
+
+[33mcommit b7777679f11554c1899dbfd1ce3215d11265588b[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 16:45:46 2023 +0400
+
+    second commit
+
+[33mcommit 7f124c3e839c40b8e827fdd020e35753fcbcd331[m
+Author: innaaznauryan <inna.aznauryan@gmail.com>
+Date:   Wed Jun 21 16:42:48 2023 +0400
+
+    first commit on my branch
+
+[33mcommit f43a8a6efcf0b7ff46d850cf5cf559165b59376f[m
+Merge: ee783d4 5f85a95
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:54:59 2023 +0400
+
+    merge conflict solved
+
+[33mcommit 5f85a958687b3d06a4da781acaf0740952720835[m
+Author: Emil-babayan <87567929+Emil-babayan@users.noreply.github.com>
+Date:   Tue Jun 20 11:51:11 2023 +0400
+
+    Update Testdata.txt
+    
+    boo
+
+[33mcommit cd60fd06c4fc1a3d5fbc078021c82e587f0b74e0[m
+Author: Emil-babayan <87567929+Emil-babayan@users.noreply.github.com>
+Date:   Tue Jun 20 11:50:30 2023 +0400
+
+    Update Index.html
+    
+    no
+
+[33mcommit b5635b0ca3c2ee232de521572730223147d7a897[m
+Author: Emil-babayan <87567929+Emil-babayan@users.noreply.github.com>
+Date:   Tue Jun 20 11:50:01 2023 +0400
+
+    Update Index.html
+
+[33mcommit ee783d4d6f00635b8be79cca3640bc13553e740f[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:34:45 2023 +0400
+
+    conflict
+
+[33mcommit ac95257b57d69547276838d6ef25e0e4721261a2[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:33:34 2023 +0400
+
+    boo
+
+[33mcommit 7684b6a055a3c0224bcef169ed5bb85ab9201243[m
+Merge: 795e9f9 cf8d771
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:32:25 2023 +0400
+
+    Merge branch 'test'
+
+[33mcommit 795e9f998906b4637853be0e37f518eb03696cae[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:31:27 2023 +0400
+
+    merge-test
+
+[33mcommit 5546501c4b5e170a3b891bfca7bf57b20a3ecb34[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:19:01 2023 +0400
+
+    aded modfc
+
+[33mcommit cf8d771d7132807b7aa4ca0b785b9accd2fb72f4[m
+Author: Emil-babayan <87567929+Emil-babayan@users.noreply.github.com>
+Date:   Tue Jun 20 11:16:28 2023 +0400
+
+    Create Testdata.txt
+
+[33mcommit e47dd0e8fae0241969ffd080ad29a2b30646b879[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:14:19 2023 +0400
+
+    updated info
+
+[33mcommit ea378c57948f010afa0f8cd719169db41499c2b6[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Tue Jun 20 11:12:38 2023 +0400
+
+    added description
+
+[33mcommit 0ccc95884e2032071ab7ce3b7eb479d6e913c1f1[m
+Author: Inna <inna.aznauryan@gmail.com>
+Date:   Sun Jun 18 12:54:07 2023 +0400
+
+    fixed button
+
+[33mcommit 1f2e99d3ac7b529ac19c8108ca0c0d2640a54378[m
+Author: Inna <inna.aznauryan@gmail.com>
+Date:   Sun Jun 18 12:35:48 2023 +0400
+
+    Hey, I added input
+
+[33mcommit 1de376a8c6b63955d613b4873494775ca2525c2a[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Sat Jun 17 12:14:49 2023 +0400
+
+    blablabla
+
+[33mcommit 7827fd67352c93c9683064772493e39057f702f0[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Sat Jun 17 11:50:20 2023 +0400
+
+    Hello, ppl. This is great comment to a commit
+
+[33mcommit d2c0ca43b513bc17503b4f101283b8dfcc16a98f[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Sat Jun 17 11:20:25 2023 +0400
+
+    found my lost fiule
+
+[33mcommit 9465bfb50d8008c399c85c2aa7a3a95a0860a036[m
+Author: Emil Babayan <emil.babayan24@gmail.com>
+Date:   Sat Jun 17 11:12:37 2023 +0400
+
+    fixed a bg

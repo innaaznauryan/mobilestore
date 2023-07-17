@@ -1,8 +1,9 @@
 import {useParams, Link} from "react-router-dom"
 import { useReducer } from "react"
-import {AiFillStar} from "react-icons/ai"
+// import {AiFillStar} from "react-icons/ai"
 import data from "../assets/sources/storage.json"
 import "./bBrand.style.scss"
+import PhoneRating from "./PhoneRating"
 
 const init = () => {
   const obj = {}
@@ -52,11 +53,12 @@ return (<>
       </Link>
       <div className="bottom">
         <div className="year">Model year: {year}</div>
-        <div className="rating">
+        <PhoneRating />
+        {/* <div className="rating">
           {Array(5).fill(null).map((_, index) => {
             return <span key={index + 1} data-rateid={index + 1} data-phoneid={id} className={"star"+ ((index + 1 <= state["phoneid" + id]) ? " selected" : "")} onClick={handleClick}><AiFillStar/></span>
           })}
-        </div>
+        </div> */}
           <p>{price}</p>
       </div>
         
