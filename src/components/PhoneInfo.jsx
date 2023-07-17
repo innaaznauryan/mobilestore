@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useOutletContext } from 'react-router-dom'
 
 const PhoneInfo = () => {
@@ -13,6 +14,25 @@ const PhoneInfo = () => {
           <h3><span>Price:</span>  {price}</h3>
           <h3><span>Quantity:</span>  {quantity}</h3>
         </div>
+=======
+import {useOutletContext} from 'react-router-dom'
+
+const PhoneInfo = () => {
+
+
+    const {description, price, year, model} = useOutletContext()
+
+  return (
+    <div>
+        
+
+<p>Description: {description}</p>
+<h2>{model}</h2>
+<span>{year}</span>
+<h5>${price}</h5>
+
+
+>>>>>>> master
     </div>
   )
 }

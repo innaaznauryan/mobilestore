@@ -11,7 +11,11 @@
         text-decoration: none;
     }
     
+<<<<<<< HEAD
     div {
+=======
+    div:not(.rating) {
+>>>>>>> master
         
         margin: auto;
         width: 100%;
@@ -43,10 +47,13 @@
             color: rgb(132, 131, 131);
         }
 
+<<<<<<< HEAD
         img {
             
         }
 
+=======
+>>>>>>> master
     
     }
     
@@ -57,8 +64,23 @@
     img {
         width: 90%;
     }
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> master
 }
 
 
 
 
+<<<<<<< HEAD
+=======
+dialog > form {
+    input:not([type='checkbox']) {
+        display: block;
+    }
+}
+
+
+>>>>>>> master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useLocation, useOutletContext, Link } from 'react-router-dom';
 import data from "../assets/Phones_Data_Storage/sources/storage.json";
@@ -35,6 +36,13 @@ const PhonePics = () => {
         }
     </div>
     </>
+=======
+import React from 'react'
+
+const PhonePics = () => {
+  return (
+    <div>PhonePics</div>
+>>>>>>> master
   )
 }
 
