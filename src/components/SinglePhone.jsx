@@ -9,7 +9,7 @@ const SinglePhone = () => {
   const [state, dispatch] = useContext(SinglePhoneContext)
   const customState = useLocation().state
   const {id, brand, image, model, price, quantity, year} = customState
-console.log(state)
+  console.log(state)
 
   return (
     <div className="single">

@@ -1,8 +1,8 @@
 import {createContext, useReducer} from 'react'
 
 export const SinglePhoneContext = createContext(null)
-const reducer = (state, action) => {
-    return action
+const reducer = (state, active) => {
+    return active
 }
 
 const PhoneContext = ({children}) => {

@@ -2,6 +2,10 @@
     position: relative;
     max-width: 500px;
     margin: 0 auto;
+    img {
+        width: 500px;
+        aspect-ratio: 1;
+    }
 }
 .pic-Container {
     width: 600px;
