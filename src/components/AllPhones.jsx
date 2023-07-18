@@ -14,8 +14,10 @@ const [phones, setPhones] = useState(data.sort(()=> Math.random() - 0.5))
 
   return (
    <>
-<NarekFilter data={data} fn={setPhones}/>
 
+
+<NarekFilter data={data} fn={setPhones}/>
+<h1>asdasd</h1>
     <div className='phone-container'>{phones.map(({id, brand, brandId, image, model, price, quantity, year}) => {
       
       return <Link key={id} to={`products/phone${brandId}/single`} state={{id, brand, image, model, price, quantity, year}}>

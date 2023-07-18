@@ -1,8 +1,10 @@
-import React from 'react'
+import {useId} from 'react'
 import withModal from './HOC/withModal'
 
 const NewLogin = (props) => {
-  console.log(props)
+
+const id = useId()
+
   return (
    <form action="">
 
