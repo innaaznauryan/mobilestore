@@ -37,8 +37,8 @@ const handleClick = (e) => {
   }
 }
 
-return (<>
-<Link to="/">Go back to all phones</Link>
+return (<div className="bybrand">
+<Link className="link" to="/">Go back to all phones</Link>
 
 <div className='phone-container'>{data.filter(phone => phone.brandId == brand.at(-1))
         
@@ -64,7 +64,7 @@ return (<>
       </div>
       
     })}</div>
-</>
+</div>
     
   )
 }

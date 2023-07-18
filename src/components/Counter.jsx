@@ -17,7 +17,7 @@ const data = useFetch("https://jsonplaceholder.typicode.com/comments")
 
 const [stored, setStored] = useLocalStorage("admin")
 
-console.log(stored)
+// console.log(stored)
 
 //_____
 

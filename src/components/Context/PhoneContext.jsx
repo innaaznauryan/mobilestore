@@ -1,14 +1,11 @@
-import {createContext, useReducer} from 'react'
+import {createContext, useReducer, useState} from 'react'
 
 export const SinglePhoneContext = createContext(null)
-const reducer = (state, active) => {
-    return active
-}
 
 const PhoneContext = ({children}) => {
-    const [state, dispatch] = useReducer(reducer, null)
+    const [state, setState] = useState(null)
   return (
-    <SinglePhoneContext.Provider value={[state, dispatch]}>
+    <SinglePhoneContext.Provider value={[state, setState]}>
         {children}
     </SinglePhoneContext.Provider>
   )
