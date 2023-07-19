@@ -9,19 +9,22 @@
 }
 .pic-Container {
     width: 600px;
+    padding-top: 40px;
     overflow: hidden;
     .wrapper {
         display: flex;
         transition: .5s;
-        img {
+            img {
             width: 200px;
+            aspect-ratio: 1;
+            transition: .5s;
             &:hover{
                 cursor: pointer;
             }
         }
         .selected {
-            border: 2px solid rgba(0, 139, 139, 0.632);
             border-radius: 5px;
+            transform: translateY(-40px);
         }
     }
 }

@@ -29,7 +29,6 @@ aside {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 10px;
     gap: 20px;
 }
 
@@ -51,15 +50,14 @@ h3 {
     transition: max-height 350ms ease;
     max-height: 0px;
     height: var(--h);
+    margin: 0 10px;
     p{
         text-align: center;
         color: rgb(200, 200, 200);
     }
 }
 .acc.open {
-    max-height: var(--h);
-
-
+    max-height: var(--h)
 
 }
 
@@ -139,5 +137,4 @@ dialog {
      }
    } 
 }
-
 

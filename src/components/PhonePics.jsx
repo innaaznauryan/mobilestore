@@ -18,22 +18,20 @@ const PhonePics = () => {
     if(index == currentPics.length - 1) {
       array.push(array.shift())
       setCurrentPics(array)
-      
-      // setActive(currentPics.length - 2)
-      // divRef.current.style.transform = ""
+      const styles = divRef.current.style.transform
+      const value = styles.split("(")[1].split(")")[0]
+      const translateX = parseFloat(value)
+      console.log(translateX)
 
+      divRef.current.style.transform = `translateX(${translateX - 200}px)`
     }
     else if (index == 0) {
       array.unshift(array.pop())
       setCurrentPics(array)
-      // setActive(currentPics.length - 2)
     }
     else {
       setActive(index)
     }
-console.log(active)
-
-
   }
 
   return (

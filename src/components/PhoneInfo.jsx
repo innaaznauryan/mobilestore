@@ -1,9 +1,15 @@
 import {useOutletContext} from 'react-router-dom'
+import { useContext, useEffect} from "react"
+import {SinglePhoneContext} from "./Context/PhoneContext"
 
 const PhoneInfo = () => {
 
+  const {description, price, year, model} = useOutletContext()
+  const [state, setState] = useContext(SinglePhoneContext)
 
-    const {description, price, year, model} = useOutletContext()
+  useEffect(() => {
+    setState(null)
+  })
 
   return (
     <div>
