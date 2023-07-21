@@ -1,13 +1,16 @@
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 
 const withModal = (Component, smth) => {
 
+console.log("I ran ")
 
   return () => {
     const [open, setOpen] = useState(false)
     const dialogRef = useRef(null)
+    
     function handleDialog(){
-       !open? dialogRef.current.showModal() : dialogRef.current.close()
+        !open ? dialogRef.current.showModal() : dialogRef.current.close()
+        dialogRef.current.scrollTop = dialogRef.current.scrollHeight
         setOpen(o => !o)
     }
 
