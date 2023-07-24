@@ -1,17 +1,20 @@
 import {useLocation, Link, Outlet} from "react-router-dom"
-import { useContext, useEffect} from "react"
-import {SinglePhoneContext} from "./Context/PhoneContext"
+import { useEffect} from "react"
+import { useDispatch, useSelector } from "react-redux"
+import {displayPhone} from "./redux/phoneSlice"
 import "./singlePhone.style.scss"
-
 
 const SinglePhone = () => {
 
-  const [state, setState] = useContext(SinglePhoneContext)
   const customState = useLocation().state
   const {id, brand, image, model, price, quantity, year} = customState
 
+  const d = useDispatch()
+  const phone = useSelector(({displayPhone}) => { 
+    return displayPhone})
+
   useEffect(() => {
-    setState(null)
+    d(displayPhone(null))
   }, [])
 
   return (
@@ -19,7 +22,7 @@ const SinglePhone = () => {
         <h1>{brand}</h1>
         <Link className="link" relative="path" to=".." state={customState}>Go back</Link>
         <hr />
-        {state ? (<img src={`/Phones_Data_Storage/images/${brand}/${state}`} alt="" />) : (<img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />)}
+        {phone.image ? (<img src={`/Phones_Data_Storage/images/${brand}/${phone.image}`} alt="" />) : (<img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />)}
 
 
       <Link className="link" state={customState} to=".">Info </Link> 

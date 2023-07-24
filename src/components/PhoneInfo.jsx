@@ -1,14 +1,16 @@
 import {useOutletContext} from 'react-router-dom'
-import { useContext, useEffect} from "react"
-import {SinglePhoneContext} from "./Context/PhoneContext"
+import { useEffect} from "react"
+import { useDispatch } from "react-redux"
+import {displayPhone} from "./redux/phoneSlice"
 
 const PhoneInfo = () => {
 
   const {description, price, year, model} = useOutletContext()
-  const [state, setState] = useContext(SinglePhoneContext)
+
+  const d = useDispatch()
 
   useEffect(() => {
-    setState(null)
+    d(displayPhone(null))
   })
 
   return (

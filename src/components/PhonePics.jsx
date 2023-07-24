@@ -1,6 +1,7 @@
-import { useState, useContext, useRef } from 'react'
+import { useState, useRef } from 'react'
 import {useLocation} from 'react-router-dom'
-import {SinglePhoneContext} from "./Context/PhoneContext"
+import { useDispatch } from "react-redux"
+import {displayPhone} from "./redux/phoneSlice"
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai"
 import data from "/public/Phones_Data_Storage/sources/storage.json"
 
@@ -8,12 +9,13 @@ const PhonePics = () => {
   const {id, brand} = useLocation().state
   const [currentPics, setCurrentPics] = useState(() => data.filter(elem => elem.brand == brand))
   const [active, setActive] = useState(() => currentPics.findIndex(elem => elem.id == id))
-  const [state, setState] = useContext(SinglePhoneContext)
   const divRef = useRef(null)
+
+  const d = useDispatch()
 
   const handleClick = (id, index) => {
     const array = [...currentPics]
-    setState(currentPics.find(elem => elem.id == id).image)
+    d(displayPhone((currentPics.find(elem => elem.id == id).image)))
     
     if(index == currentPics.length - 1) {
       array.push(array.shift())
