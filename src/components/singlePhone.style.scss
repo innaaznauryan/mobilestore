@@ -6,7 +6,27 @@
         width: 500px;
         aspect-ratio: 1;
     }
+    h1 {
+        color: cadetblue;
+    }
+    .links {
+        text-align: center;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        p {
+            text-align: center;
+        }
+        h2, h5 {
+            color: cadetblue;
+        }
+    }
 }
+
 .pic-Container {
     width: 600px;
     padding-top: 40px;

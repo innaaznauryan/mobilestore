@@ -24,10 +24,10 @@ const SinglePhone = () => {
         <hr />
         {phone.image ? (<img src={`/Phones_Data_Storage/images/${brand}/${phone.image}`} alt="" />) : (<img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />)}
 
-
-      <Link className="link" state={customState} to=".">Info </Link> 
-
-      <Link className="link" state={customState} to="pics">Pics</Link>
+      <div className="links">
+        <Link className="link" state={customState} to=".">Info </Link> 
+        <Link className="link" state={customState} to="pics">Pics</Link>
+      </div>
       <Outlet context={{description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tenetur voluptate eius. Inventore quidem delectus cum at, officia quas iure tempore deserunt, id accusamus deleniti vitae ex recusandae, numquam distinctio.",
     price, year, model}}/>
 
