@@ -1,23 +1,7 @@
-.bybrand {
+
+.goback{
+    padding-left: 200px;
     text-align: center;
-    .link{
-        margin-left: 200px;
-    }
-}
-.bottom {
-    * {
-        box-shadow: none;
-    }
-border-radius: none;
-width: 100%;
-&>div {
-    border-radius: 0;
-    color: #242424;
-    width: 100%;
-    p {
-        color: #242424;
-
-    }
-}
-
+    display: block;
+    margin: 0 auto;
 }

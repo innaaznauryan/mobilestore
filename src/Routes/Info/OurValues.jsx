@@ -6,7 +6,7 @@ const OurValues = () => {
     
     <div>
 
-    <p>Our values Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel sapiente consectetur sunt reiciendis in repellat harum provident repudiandae distinctio mollitia, a soluta, nisi neque inventore voluptas nulla repellendus id!</p>
+    <p>Our values Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel sapiente consectetur sunt reiciendis in repellat harum provident repudiandae distinctio mollitia.</p>
     </div>
     </>
   )

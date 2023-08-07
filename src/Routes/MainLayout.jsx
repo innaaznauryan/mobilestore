@@ -42,8 +42,8 @@ const MainLayout = () => {
     </nav>
     <aside>
 
-      <Counter/>
-      <NewLogin/>
+      {/* <Counter/>
+      <NewLogin/> */}
 
       <AboutUs/>
       <OurValues/>

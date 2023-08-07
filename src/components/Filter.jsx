@@ -1,6 +1,6 @@
 import {useRef, useEffect} from 'react'
 
-const NarekFilter = ({fn, data}) => {
+const Filter = ({fn, data}) => {
 
 
 
@@ -83,4 +83,4 @@ function handleDialogSubmit (e){
   )
 }
 
-export default NarekFilter
+export default Filter

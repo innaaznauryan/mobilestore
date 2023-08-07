@@ -1,9 +1,12 @@
 .single {
     position: relative;
-    max-width: 500px;
+    max-width: 440px;
     margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 rgb(132, 131, 131);
     img {
-        width: 500px;
+        width: 400px;
         aspect-ratio: 1;
     }
     h1 {
@@ -11,7 +14,9 @@
     }
     .links {
         text-align: center;
+        font-size: 18px;
     }
+
     .info {
         display: flex;
         flex-direction: column;
@@ -29,21 +34,22 @@
 
 .pic-Container {
     width: 600px;
-    padding-top: 40px;
+    padding-top: 80px;
     overflow: hidden;
+    position: absolute;
+    left: -80px;
     .wrapper {
         display: flex;
         transition: .5s;
-            img {
-            width: 200px;
-            aspect-ratio: 1;
-            transition: .5s;
+        img {
+        width: 200px;
+        aspect-ratio: 1;
+        transition: .5s;
             &:hover{
                 cursor: pointer;
             }
         }
         .selected {
-            border-radius: 5px;
             transform: translateY(-40px);
         }
     }

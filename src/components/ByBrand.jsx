@@ -1,6 +1,6 @@
 import {useParams, Link} from "react-router-dom"
 import data from "../assets/sources/storage.json"
-import PhoneRating from "./PhoneRating"
+import PhoneComponent from "./PhoneComponent"
 import "./bBrand.style.scss"
 
 // const init = () => {
@@ -36,37 +36,22 @@ const {brand} = useParams()
 //   }
 // }
 
-return (<div className="bybrand">
-<Link className="link" to="/">Go back to all phones</Link>
+return (
+<>
 
-<div className='phone-container'>{data.filter(phone => phone.brandId == brand.at(-1))
-        
-        .map(({id, brand, image, model, price, quantity, year}) => {
-     return <div key={id} className="phone">
-     <Link key={id} to="single" state={{id, brand, image, model, price, quantity, year}}>
-        <h4>{brand}</h4>
-        <h2>{model}</h2>
-        <img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />
-      
+<Link className="goback link" to="/">Go back to all phones</Link>
 
-      <div className="bottom">
-        <div className="year">Model year: {year}</div>
-        <PhoneRating />
-        {/* <div className="rating">
-          {Array(5).fill(null).map((_, index) => {
-            return <span key={index + 1} data-rateid={index + 1} data-phoneid={id} className={"star"+ ((index + 1 <= state["phoneid" + id]) ? " selected" : "")} onClick={handleClick}><AiFillStar/></span>
-          })}
-        </div> */}
-          <p>Price: ${price}</p>
-      </div>
-      </Link>
-        
-
-      </div>
-      
-    })}</div>
-</div>
-    
+  <div className='phone-container'>
+    {data.filter(phone => phone.brandId == brand.at(-1))    
+    .map(({id, brand, image, model, price, quantity, year}) => {
+      return <div key={id} className="phone">
+        <Link to="single" state={{id, brand, image, model, price, quantity, year}}>
+          <PhoneComponent {...{id, brand, image, model, price, quantity, year}} />
+        </Link>
+    </div>
+    })}
+  </div>
+</>
   )
 }
 

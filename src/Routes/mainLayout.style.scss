@@ -21,7 +21,7 @@ button {
 aside {
     height: 100vh;
     position: fixed;
-    width: 250px;
+    width: 200px;
     background-color: rgb(200, 200, 200);
     z-index: 3;
     top: 0;
@@ -41,7 +41,7 @@ h3 {
 
 
 .acc {
-    --h: 200px;
+    --h: 160px;
     background-color: darkcyan;
     border-radius: 5px;
     display: flex;
@@ -50,7 +50,6 @@ h3 {
     transition: max-height 350ms ease;
     max-height: 0px;
     height: var(--h);
-    margin: 0 10px;
     p{
         text-align: center;
         color: rgb(200, 200, 200);
@@ -63,44 +62,40 @@ h3 {
 
 
 nav {
-    height: 8vmin;
+    height: 10vmin;
     padding-inline: 15px;
     border-bottom: 1px solid #c9c9c9;
     margin-bottom: 20px;
     background-color: #f6f6f6;
     display: flex;
-    > a > img {
-        height: 100%;
-        
-    }
     position: relative;
     z-index: 5;
+    > a > img {
+        height: 100%; 
+    }
 }
 
 ul {
     flex: 1;
     display: flex;
-    gap: 0.5vmin;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    
-    ;
 
     li {
         list-style-type: none;
-        // border: 1px solid black;
-        width: 80px;
+        width: 100px;
         text-align: center;
-        
+        padding: 5px;
     }
 
     a {
         text-decoration: none;
         color: #242424;
-        font-size: clamp(14px, 3vw, 22px);
-        &.active {
-            font-weight: 700;
-        }
+        font-size: clamp(12px, 3vw, 22px);
+    }
+    a.active {
+        font-weight: 700;
     }
 
 
