@@ -1,10 +1,12 @@
 import {configureStore} from "@reduxjs/toolkit"
 import phoneReducer from "./phoneSlice"
+import userReducer from "./userSlice"
 
 const store = configureStore({
     reducer: {
-        displayPhone: phoneReducer
+        displayPhone: phoneReducer,
+        login: userReducer
     }
 })
-console.log(phoneReducer)
+
 export default store

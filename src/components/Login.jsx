@@ -1,30 +1,34 @@
-import {useContext} from 'react'
-import { UserContext } from './Context/UserAuthContext'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import {loginUser} from "./redux/userSlice"
+import "./login.style.scss"
 
 const Login = () => {
 
 
-
   const nav = useNavigate()
-  const [_, dispatchUser] = useContext(UserContext)
+  const dispatch = useDispatch()
+  const login = useSelector(state => state.login)
+  console.log(login)
 
   function handleSubmit(e){
     e.preventDefault()
-    
-
-    dispatchUser({type: "LOGIN", payload: Object.fromEntries([...new FormData(e.target)])})
+    dispatch(loginUser(Object.fromEntries([...new FormData(e.target)])))
+    console.log(login)
     nav("/")
-
   }
 
   return (
-   <form action="" onSubmit={handleSubmit}>
-    <input name='login' type="text" />
-    <input name='password' type="password" />
-    <input type="submit" value="Submit" />
-   </form>
-  )
+<>
+    <div className='intro'>Have an account? Sign in!</div>
+    <form action="" onSubmit={handleSubmit}>
+      <input name='login' type="text" placeholder='Login'/>
+      <input name='password' type="password" placeholder='Password'/>
+      <button type="submit">Submit</button>
+    </form>
+</>
+
+)
 }
 
 export default Login

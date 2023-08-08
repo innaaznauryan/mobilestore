@@ -33,9 +33,10 @@ const reducer = (state, action) => {
                 payload.password == credentials.pass
                 ) 
             return valodState
+        default:
+            return state
     }
-    return state
-}
+} 
 
 const UserAuthContext = ({children}) => {
 
