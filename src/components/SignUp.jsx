@@ -1,21 +1,19 @@
 import {Formik} from "formik"
-import {Schema} from '../validation/Schema.js'
-import {Context} from './ContextProvider'
-import {useContext, useRef} from 'react'
-
-let ID
-if (!localStorage.getItem("curUserId")) ID = 1
-else ID = +localStorage.getItem("curUserId")
+import {Schema} from './validation/Schema.js'
+import { useDispatch, useSelector } from 'react-redux'
+import { signupUser } from "./redux/signupSlice.js"
+import {useRef} from 'react'
 
 const SignUp = () => {
-    const [state, dispatch] = useContext(Context)
+    const dispatch = useDispatch()
+    const signup = useSelector(state => state.signup)
     const formRef = useRef()
+    console.log(signup)
 
     const submitReg = (values, {setSubmitting}) => {
         setSubmitting(true)
-        dispatch({type: "updateKeys", payload: {userId: ID, ...values}})
-        localStorage.setItem("user" + ID, JSON.stringify(values))
-        localStorage.setItem("curUserId", ++ID)
+        dispatch(signupUser(values))
+        localStorage.setItem("signup", JSON.stringify(values))
         setTimeout(() => {
             setSubmitting(false)
             formRef.current.reset()
@@ -27,10 +25,9 @@ const SignUp = () => {
         <Formik 
         initialValues={{
             fName: "",
-            lName: "",
-            email: "",
+            login: "",
             password: "",
-            password2: ""
+            password2: ""            
         }}
         onSubmit={submitReg}
         validationSchema={Schema}>
@@ -38,25 +35,21 @@ const SignUp = () => {
             return <form action="" onSubmit={handleSubmit} ref={formRef}>
                 <div className="inputBox">
                     <input type="text" placeholder='First Name' name="fName" onChange={handleChange} onBlur={handleBlur}/>
-                    {errors.fName && touched.fName && <span className='inputError'>{errors.fName}</span>}
+                    {errors.fName && touched.fName && <p className='inputError'>{errors.fName}</p>}
                 </div>
                 <div className="inputBox">
-                    <input type="text" placeholder='Last Name' name="lName" onChange={handleChange} onBlur={handleBlur}/>
-                    {errors.lName && touched.lName && <span className='inputError'>{errors.lName}</span>}
-                </div>
-                <div className="inputBox">
-                    <input type="text" placeholder='Email' name="email" onChange={handleChange} onBlur={handleBlur}/> 
-                    {errors.email && touched.email && <span className='inputError'>{errors.email}</span>}
+                    <input type="text" placeholder='Login' name="login" onChange={handleChange} onBlur={handleBlur}/>
+                    {errors.login && touched.login && <p className='inputError'>{errors.login}</p>}
                 </div>
                 <div className="inputBox">
                     <input type="password" placeholder='Password' name="password" onChange={handleChange} onBlur={handleBlur}/>
-                    {errors.password && touched.password && <span className='inputError'>{errors.password}</span>}
+                    {errors.password && touched.password && <p className='inputError'>{errors.password}</p>}
                 </div>
                 <div className="inputBox">
                     <input type="password" placeholder='Repeat Password' name="password2" onChange={handleChange} onBlur={handleBlur}/>
-                    {errors.password2 && touched.password2 && <span className='inputError'>{errors.password2}</span>}
+                    {errors.password2 && touched.password2 && <p className='inputError'>{errors.password2}</p>}
                 </div>
-                <input type="submit" value="Sign up" disabled={isSubmitting}/>
+                <button type="submit" disabled={isSubmitting}>Submit</button>
             </form>
         }}
         </Formik>

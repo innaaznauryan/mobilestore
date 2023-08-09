@@ -9,6 +9,7 @@ import Login from './components/Login'
 import PhoneInfo from './components/PhoneInfo'
 import PhonePics from './components/PhonePics'
 import Error from './components/Error'
+import SignUp from './components/SignUp'
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
   
       <Route index element={<AllPhones/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<SignUp/>}/>
       <Route path='products/:brand' element={<ByBrand/>}/>
       <Route path='products/:brand/single' element={<SinglePhone/>}>
         <Route index element={<PhoneInfo/>}/>

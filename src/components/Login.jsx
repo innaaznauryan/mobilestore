@@ -1,21 +1,29 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import {loginUser} from "./redux/userSlice"
+import {loginUser} from "./redux/loginSlice"
 import "./login.style.scss"
 
 const Login = () => {
 
+  const user = JSON.parse(localStorage.getItem("signup"))
 
   const nav = useNavigate()
   const dispatch = useDispatch()
   const login = useSelector(state => state.login)
   console.log(login)
 
+  const [wrongUser, setWrongUser] = useState(false)
+
   function handleSubmit(e){
     e.preventDefault()
-    dispatch(loginUser(Object.fromEntries([...new FormData(e.target)])))
-    console.log(login)
-    nav("/")
+    const FD = Object.fromEntries([...new FormData(e.target)])
+    if(FD.login == user?.login && FD.password == user?.password) {
+      const activeState = {name: user?.fName, loggedIn: true}
+      dispatch(loginUser(activeState))
+      localStorage.setItem("login", JSON.stringify(activeState))
+      nav("/")
+    } else setWrongUser(true)
   }
 
   return (
@@ -26,8 +34,8 @@ const Login = () => {
       <input name='password' type="password" placeholder='Password'/>
       <button type="submit">Submit</button>
     </form>
+    {wrongUser && <div className='wrongUser'>Wrong Login or Password</div>}
 </>
-
 )
 }
 

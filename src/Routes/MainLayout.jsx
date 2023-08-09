@@ -14,10 +14,12 @@ const MainLayout = () => {
 
 
     <Link to="/login">
-      <div className="loginDiv">
-        <h2>Login</h2>
-      </div>  
+      <div className="loginDiv">Login</div>  
     </Link>
+    <Link to="/signup">
+      <div className="loginDiv singupDiv">Sign Up</div>
+    </Link>
+    
     <nav>
       <Link to="/"><img src={logo} alt="" /></Link>
         <ul>
