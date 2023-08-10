@@ -1,12 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+const signup = JSON.parse(localStorage.getItem("signup"))
+const activeState = {
+    fName: signup.fName || "",
+    login: signup.login || "",
+    password: signup.password || ""
+}
+
 const signupSlice = createSlice({
     name: "signup",
-    initialState: {
-        fName: "",
-        login: "",
-        password: ""
-    },
+    initialState: {...activeState},
     reducers: {
         signupUser(state, {payload}) {
             return payload

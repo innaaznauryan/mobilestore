@@ -1,3 +1,6 @@
+
+// Button styles 
+
 .link, button{
     display: inline-block;
     text-decoration: none;
@@ -18,6 +21,8 @@ button {
     }
 }
 
+// Aside 
+
 aside {
     height: 100vh;
     position: fixed;
@@ -30,36 +35,36 @@ aside {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-}
 
-h3 {
-    color: darkcyan;
-    &:hover {
-        cursor: pointer;
+    h3 {
+        color: darkcyan;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .acc {
+        --h: 160px;
+        background-color: darkcyan;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transition: max-height 350ms ease;
+        max-height: 0px;
+        height: var(--h);
+        p{
+            text-align: center;
+            color: rgb(200, 200, 200);
+        }
+    }
+    .acc.open {
+        max-height: var(--h)
+    
     }
 }
 
-
-.acc {
-    --h: 160px;
-    background-color: darkcyan;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    transition: max-height 350ms ease;
-    max-height: 0px;
-    height: var(--h);
-    p{
-        text-align: center;
-        color: rgb(200, 200, 200);
-    }
-}
-.acc.open {
-    max-height: var(--h)
-
-}
-
+// Nav style 
 
 nav {
     height: 10vmin;
@@ -86,19 +91,19 @@ ul {
         list-style-type: none;
         width: 100px;
         text-align: center;
-        padding: 5px;
     }
 
     a {
         text-decoration: none;
         color: #242424;
-        font-size: clamp(12px, 3vw, 22px);
-    }
-    a.active {
-        font-weight: 700;
+        font-size: clamp(10px, 3vw, 20px);
+        &.active {
+            font-weight: 700;
+        }
     }
 }
 
+// Login and signup BUTTONS 
 
 .loginDiv {
     position: fixed;
@@ -122,6 +127,8 @@ ul {
     top: calc(12vmin + 70px)
 }
 
+// Filter style 
+
 dialog {
 
     width: 450px;
@@ -129,12 +136,52 @@ dialog {
     inset: 0;
     margin: auto;
     padding: 24px;
+
    form {
-     * {
-        margin: 0 auto;
-        width: fit-content;
-        margin-bottom: 10px;
+     .phoneDiv {
+        display: flex;
+        justify-content: space-between;
+        width: 130px;
+        padding: 5px 0;
+        input {
+            width: fit-content;
+            accent-color: cadetblue;
+        }
      }
    } 
 }
 
+// Login and Signup Component styles
+
+.intro {
+    text-align: center;
+    margin: 20px;
+    color: cadetblue;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    input {
+        padding: 10px;
+        border-radius: 5px;
+        outline: 0;
+        border: 1px solid;
+        width: 200px;
+    }
+}
+.wrongUser {
+    text-align: center;
+    margin: 20px;
+    color: brown;
+}
+.inputBox {
+    text-align: center;
+    p{
+        height: 20px;
+        padding-top: 5px;
+        color: brown;
+    }
+}

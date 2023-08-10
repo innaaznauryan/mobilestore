@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+const user = JSON.parse(localStorage.getItem("login"))
+
 const loginSlice = createSlice({
     name: "login",
-    initialState: {
-        name: "",
-        loggedIn: false
-    },
+    initialState: {...user},
     reducers: {
         loginUser(state, {payload}) {
             return payload

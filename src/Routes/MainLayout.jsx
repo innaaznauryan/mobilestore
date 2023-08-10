@@ -1,10 +1,8 @@
-import {Route, Outlet, NavLink, Link} from "react-router-dom"
-import "./mainLayout.style.scss"
-import logo from "../assets/Logo.png" 
+import {Outlet, NavLink, Link} from "react-router-dom"
 import AboutUs from "./Info/AboutUs"
 import OurValues from "./Info/OurValues"
-import Counter from "../components/Counter"
-import NewLogin from "../components/NewLogin"
+import logo from "../assets/Logo.png" 
+import "./mainLayout.style.scss"
 
 
 const MainLayout = () => {
@@ -14,7 +12,7 @@ const MainLayout = () => {
 
 
     <Link to="/login">
-      <div className="loginDiv">Login</div>  
+      <div className="loginDiv">Sign In</div>  
     </Link>
     <Link to="/signup">
       <div className="loginDiv singupDiv">Sign Up</div>

@@ -1,74 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
 
 .cont{
   display: flex;
   justify-content: center;
-  position: relative;
-  background-color: red;
+
+  .time {
+    width: 50%;
+        
+    p{
+      color: green;
+      width: 70%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 25px;
+      padding: 30px;
+    }
+    h2{
+      font-size: 40px;
+      color: red;
+      text-align: center;
+    }
+  }
+
+
   .info{
-    position: absolute;
+    width: 50%;
+    text-align: center;
+
     h1{
-     
-        text-align: center;
         font-size: 70px;
         color: red;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     h3{
-     
-        text-align: center;
         margin-top: 30px;
         color: rgba(101, 7, 7, 0.798);
         font-size: 35px;
         font-family: Arial, Helvetica, sans-serif;
     }
     img{
-      
         width: 400px;
         height: 400px;
-        
     }
   }
-   
 }
 
-.time {
-  position: absolute;
-  left: 100px;
-  top: 20px;
-    div{
-      width: 300px;
-      button {
-        border-radius: 10px;
-        padding: 15px;
-        border: none;
-        cursor: pointer;
-        background-color: green;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        &:hover{
-          transform: scale(1.1);
-          opacity: 0.7;
-          transition: 0.5s;
-        }
-      }
-      
-      p{
-        color: green;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 25px;
-      }
-      h2{
-        font-size: 40px;
-        color: red;
-      }
-    }
- 
-}
+
