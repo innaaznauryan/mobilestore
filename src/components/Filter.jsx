@@ -1,4 +1,5 @@
 import {useRef, useEffect} from 'react'
+import "./filter.style.scss"
 
 const Filter = ({fn, data}) => {
 
@@ -45,7 +46,6 @@ function handleDialogSubmit (e){
     <input type="number" name='min' placeholder='Min' />
     <input type="number" name='max' placeholder='Max' />
 
-  <div className="checkDiv">
     <div className="phoneDiv">
           <label htmlFor="phone1">Samsung</label>
           <input value="phone1" type="checkbox" name="phone1" id="phone1" />
@@ -66,7 +66,6 @@ function handleDialogSubmit (e){
           <label htmlFor="phone5">Nokia</label>
           <input value="phone5" type="checkbox" name="phone5" id="phone5" />
     </div>
-  </div>
 
 <button type='submit'>Submit</button>
 

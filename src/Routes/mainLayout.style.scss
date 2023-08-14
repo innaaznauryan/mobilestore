@@ -68,11 +68,12 @@ aside {
 
 nav {
     height: 10vmin;
-    padding-inline: 15px;
+    padding-inline: 30px;
     border-bottom: 1px solid #c9c9c9;
     margin-bottom: 20px;
     background-color: #f6f6f6;
     display: flex;
+    justify-content: space-between;
     position: relative;
     z-index: 5;
     > a > img {
@@ -81,7 +82,6 @@ nav {
 }
 
 ul {
-    flex: 1;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -97,8 +97,22 @@ ul {
         text-decoration: none;
         color: #242424;
         font-size: clamp(10px, 3vw, 20px);
+        transition: .5s;
         &.active {
             font-weight: 700;
+            color: cadetblue;
+        }
+    }
+}
+
+.cart {
+    svg {
+        height: 100%;
+        font-size: 18px;
+        color: #242424;
+        transition: .5s;
+        &:hover {
+            color: cadetblue;
         }
     }
 }
@@ -125,30 +139,6 @@ ul {
 }
 .singupDiv {
     top: calc(12vmin + 70px)
-}
-
-// Filter style 
-
-dialog {
-
-    width: 450px;
-    height: 450px;
-    inset: 0;
-    margin: auto;
-    padding: 24px;
-
-   form {
-     .phoneDiv {
-        display: flex;
-        justify-content: space-between;
-        width: 130px;
-        padding: 5px 0;
-        input {
-            width: fit-content;
-            accent-color: cadetblue;
-        }
-     }
-   } 
 }
 
 // Login and Signup Component styles

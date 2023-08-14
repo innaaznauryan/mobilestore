@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const phoneSlice = createSlice({
-    name: "display",
+    name: "phone",
     initialState: {
         image: null
     },

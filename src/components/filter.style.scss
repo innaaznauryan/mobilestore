@@ -1,0 +1,22 @@
+
+dialog {
+
+    width: 450px;
+    height: 450px;
+    inset: 0;
+    margin: auto;
+    padding: 24px;
+
+   form {
+     .phoneDiv {
+        display: flex;
+        justify-content: space-between;
+        width: 130px;
+        padding: 5px 0;
+        input {
+            width: fit-content;
+            accent-color: cadetblue;
+        }
+     }
+   } 
+}

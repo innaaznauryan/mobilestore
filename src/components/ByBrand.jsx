@@ -16,25 +16,6 @@ import "./bBrand.style.scss"
 const ByBrand = () => {
 
 const {brand} = useParams()
-// const reducer = (state, {type, payload}) => {
-//   return {...state, [type]: payload}
-// }
-
-// const [state, dispatch] = useReducer(reducer, {}, init)
-
-// Because I couldn't yet figure out how to push ratings into an array in payload of the reducer function for each phone object, and I couldn't count their average rating, so I added every new rating to the previous one and devided by 2
-
-// const handleClick = (e) => {
-//   const {phoneid, rateid} = e.target.dataset
-//   if(state.hasOwnProperty("phoneid" + phoneid)) {
-//     dispatch({type: "phoneid" + phoneid, payload: +((+state["phoneid" + phoneid] + +rateid) / 2).toFixed(2)})
-//     localStorage.setItem("phoneid" + phoneid, +((+state["phoneid" + phoneid] + +rateid) / 2).toFixed(2))
-//   }
-//   else {
-//     dispatch({type: "phoneid" + phoneid, payload: +rateid})
-//     localStorage.setItem("phoneid" + phoneid, +rateid)
-//   }
-// }
 
 return (
 <>
