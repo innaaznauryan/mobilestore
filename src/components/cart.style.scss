@@ -1,0 +1,37 @@
+.cartComponent {
+    text-align: center;
+    svg {
+        color: cadetblue;
+        font-size: 100px;
+        margin: 20px;
+    }
+    p {
+        font-size: 20px;
+        color: cadetblue;
+    }
+    table {
+        display: inline-block;
+        margin: 20px;
+        img {
+            width: 50px;
+        }
+        th, td {
+            padding: 10px 20px;
+        }
+        th {
+            color: cadetblue;
+        }
+        tbody td:first-of-type {
+            color: cadetblue;
+        }
+        tfoot {
+            tr {
+                color: cadetblue;
+                font-weight: 600;
+            }
+            td:first-of-type {
+                text-align: left;
+            }
+        }
+    }
+}

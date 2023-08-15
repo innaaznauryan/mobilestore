@@ -106,6 +106,7 @@ ul {
 }
 
 .cart {
+    position: relative;
     svg {
         height: 100%;
         font-size: 18px;
@@ -113,6 +114,37 @@ ul {
         transition: .5s;
         &:hover {
             color: cadetblue;
+        }
+    }
+    .add {
+        position: absolute;
+        top: -6vmin;
+        right: -3vmin;
+        font-size: 3vmin;
+        color: cadetblue;
+        background-color: rgb(200, 200, 200);
+        width: 3vmin;
+        height: 3vmin;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+    }
+}
+.dialogCart {
+    border: 1px solid cadetblue;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    p {
+        color: cadetblue;
+        font-size: 20px;
+    }
+    svg {
+        font-size: 50px;
+        path {
+            stroke: cadetblue;
         }
     }
 }

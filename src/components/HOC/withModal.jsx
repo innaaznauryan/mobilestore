@@ -1,8 +1,6 @@
-import {useState, useRef, useEffect} from 'react'
+import {useState, useRef} from 'react'
 
 const withModal = (Component, smth) => {
-
-console.log("I ran ")
 
   return () => {
     const [open, setOpen] = useState(false)
@@ -20,7 +18,7 @@ console.log("I ran ")
         <dialog ref={dialogRef} onClose={() => setOpen(false)}>
             <Component/>
         </dialog>
-        </>
+      </>
     )
   }
 }

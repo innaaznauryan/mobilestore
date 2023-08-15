@@ -10,6 +10,7 @@ import "./mainLayout.style.scss"
 const MainLayout = () => {
 
   const login = useSelector(state => state.login)
+  const cart = useSelector(state => state.cart)
 
   return (
 <>
@@ -44,6 +45,7 @@ const MainLayout = () => {
         <div>{login.name && 
           <Link to="/cart" className="cart">
             <BsFillCartFill />
+            {cart.length == 0 ? null : <div className="add">{cart.length}</div>}
           </Link>}
         </div>
     </nav>

@@ -1,9 +1,10 @@
-import { useEffect} from "react"
+import { useEffect, useRef} from "react"
 import {useLocation, Link, Outlet} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import {BsFillCartFill} from "react-icons/bs"
 import {displayPhone} from "./redux/phoneSlice"
 import { addToCart } from "./redux/cartSlice"
+import {GrStatusGood} from "react-icons/gr"
 import "./singlePhone.style.scss"
 
 const SinglePhone = () => {
@@ -15,7 +16,7 @@ const SinglePhone = () => {
   const phone = useSelector(state => state.phone)
   const login = useSelector(state => state.login)
   const cart = useSelector(state => state.cart)
-  console.log(cart)
+  const dialogRef = useRef(null)
   
   useEffect(() => {
     d(displayPhone(null))
@@ -23,6 +24,12 @@ const SinglePhone = () => {
 
   const handleClick = () => {
     d(addToCart({id, brand, image, model, price, quantity, year}))
+    dialogRef.current.showModal()
+    dialogRef.current.style.display = "flex"
+    setTimeout(() => {
+      dialogRef.current.close()
+      dialogRef.current.style.display = "none"
+    }, 2000);
   }
 
   return (
@@ -41,6 +48,10 @@ const SinglePhone = () => {
 
       <div className="cartDiv">{login.name && 
         <button onClick={handleClick}><BsFillCartFill /> <span>Add to cart</span></button>}
+        <dialog ref={dialogRef} className="dialogCart">
+          <GrStatusGood />
+          <p>The item successfully added to cart!</p>
+        </dialog>
       </div>
 
       
