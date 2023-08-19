@@ -2,8 +2,7 @@ import { useState, useRef } from 'react'
 import {useLocation} from 'react-router-dom'
 import { useDispatch } from "react-redux"
 import {displayPhone} from "./redux/phoneSlice"
-import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai"
-import data from "/public/Phones_Data_Storage/sources/storage.json"
+import data from "../assets/sources/storage.json"
 
 const PhonePics = () => {
   const {id, brand} = useLocation().state
