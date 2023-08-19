@@ -1,8 +1,9 @@
 import {useRef} from 'react'
 import {useDispatch, useSelector} from "react-redux"
-import { removeCart } from "./redux/cartSlice"
+import {removeCart} from "./redux/cartSlice"
 import {BsCartXFill} from "react-icons/bs"
 import {GrStatusGood} from "react-icons/gr"
+import {AiFillDelete} from "react-icons/ai"
 import "./cart.style.scss"
 
 const Cart = () => {
@@ -11,6 +12,11 @@ const Cart = () => {
   const cart = useSelector(state => state.cart)
   const dialogRef = useRef(null)
 
+  const deleteItem = (array, id) => {
+    array.splice(array.findIndex(elem => elem.id == id), 1)
+    return array
+  }
+
   const handleClick = () => {
     dialogRef.current.showModal()
     dialogRef.current.style.display = "flex"
@@ -18,7 +24,15 @@ const Cart = () => {
       dialogRef.current.close()
       dialogRef.current.style.display = "none"
       d(removeCart([]))
+      localStorage.removeItem("cart")
     }, 2000);
+  }
+
+  const handleDelete = (id) => {
+    const cartState = [...cart]
+    const updatedCart = deleteItem(cartState, id)
+    d(removeCart(updatedCart))
+    updatedCart.length ? localStorage.setItem("cart", JSON.stringify(updatedCart)) : localStorage.removeItem("cart")
   }
 
   return (
@@ -26,7 +40,7 @@ const Cart = () => {
     {
       cart.length == 0 ? 
       <div>
-        <BsCartXFill />
+        <BsCartXFill className='empty'/>
         <p>Your cart is empty!</p>
       </div> : 
       <div>
@@ -40,6 +54,7 @@ const Cart = () => {
               <th>Model</th>
               <th>Year</th>
               <th>Price</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -51,6 +66,7 @@ const Cart = () => {
                 <td>{model}</td>
                 <td>{year}</td>
                 <td>֏ {price}</td>
+                <th>{<AiFillDelete onClick={() => handleDelete(id)} className='delete'/>}</th>
               </tr>
             })}
           </tbody>

@@ -6,8 +6,7 @@ import PhoneRating from "./PhoneRating"
 
 const PhoneInfo = () => {
 
-  const {description, price, year, model} = useOutletContext()
-
+  const {id, description, price, year, model} = useOutletContext()
   const d = useDispatch()
 
   useEffect(() => {
@@ -22,7 +21,7 @@ const PhoneInfo = () => {
 <h2>{model}</h2>
 <span>{year}</span>
 <h5>${price}</h5>
-<PhoneRating />
+<PhoneRating id={id}/>
 
 
     </div>

@@ -16,14 +16,22 @@ const SinglePhone = () => {
   const phone = useSelector(state => state.phone)
   const login = useSelector(state => state.login)
   const cart = useSelector(state => state.cart)
+ 
   const dialogRef = useRef(null)
+  // const cartArray = []
   
   useEffect(() => {
     d(displayPhone(null))
   }, [])
 
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
+
   const handleClick = () => {
     d(addToCart({id, brand, image, model, price, quantity, year}))
+    // cartArray.push({id, brand, image, model, price, quantity, year})
+    // localStorage.setItem("cart", JSON.stringify(cartArray))
     dialogRef.current.showModal()
     dialogRef.current.style.display = "flex"
     setTimeout(() => {
@@ -44,7 +52,7 @@ const SinglePhone = () => {
         <Link className="link" state={customState} to="pics">Pics</Link>
       </div>
       <Outlet context={{description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tenetur voluptate eius. Inventore quidem delectus cum at, officia quas iure tempore deserunt, id accusamus deleniti vitae ex recusandae, numquam distinctio.",
-    price, year, model}}/>
+    price, year, model, id}}/>
 
       <div className="cartDiv">{login.name && 
         <button onClick={handleClick}><BsFillCartFill /> <span>Add to cart</span></button>}

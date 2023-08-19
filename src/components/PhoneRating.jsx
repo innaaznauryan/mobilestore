@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import {AiFillStar} from "react-icons/ai"
 
-const PhoneRating = () => {
+const PhoneRating = ({id}) => {
 
-    const [rateSum, setRateSum] = useState("");
+    const localStorageFunc = () => {
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i)
+            const value = localStorage.getItem(key)
+            if (key == "phone" + id) return value
+        }
+    }
+
+    const [rateSum, setRateSum] = useState(() => localStorageFunc() || "");
     const [average, setAverage] = useState(0)
 
     const handleClick = (e) => {
         let num = e.target.dataset.rateid
         setRateSum(rateSum + num)
+        localStorage.setItem("phone" + id, rateSum + num)
     }
 
     useEffect(() => {
