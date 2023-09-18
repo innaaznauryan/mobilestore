@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useOutletContext} from 'react-router-dom'
 import {useSelector} from "react-redux"
 import Filter from './Filter'
 import PhoneComponent from './PhoneComponent'
@@ -10,13 +10,14 @@ const AllPhones = () => {
 
 const [phones, setPhones] = useState(data.sort(()=> Math.random() - 0.5))
 const login = useSelector(state => state.login)
+const {filterMode, setFilterMode} = useOutletContext()
 
   return (
 <>
 
-<Filter data={data} fn={setPhones} />
+<Filter data={data} setPhones={setPhones} filterMode={filterMode} setFilterMode={setFilterMode} />
 
-<h1 className='greet'>{login.name && `Hello, ${login.name}!`}</h1>
+<h1 className='greet'>{login.name ? `Hello, ${login.name}!` : "Login for adding items in your cart"}</h1>
 
     <div className='phone-container'>
       {phones.map(({id, brand, brandId, image, model, price, quantity, year}) => {

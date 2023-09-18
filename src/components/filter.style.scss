@@ -1,6 +1,7 @@
+@import "../App.scss";
 
 dialog {
-
+    background-color: $gray-color;
     width: 450px;
     height: 450px;
     inset: 0;
@@ -15,7 +16,7 @@ dialog {
         padding: 5px 0;
         input {
             width: fit-content;
-            accent-color: cadetblue;
+            accent-color: $main-color;
         }
      }
    } 

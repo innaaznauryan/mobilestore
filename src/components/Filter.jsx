@@ -1,17 +1,16 @@
 import {useRef, useEffect} from 'react'
 import "./filter.style.scss"
 
-const Filter = ({fn, data}) => {
+const Filter = ({setPhones, data, filterMode, setFilterMode}) => {
 
   const dialogRef = useRef(null)
 
   useEffect(()=> {
-
-    window.addEventListener("keydown", function(e){
-      if(e.key == "u" && e.ctrlKey && e.altKey) dialogRef.current.showModal()
-    })
-
-  }, [])
+    if(filterMode) {
+      dialogRef.current.showModal()
+      dialogRef.current.onclose = () => setFilterMode(false)
+    }
+  }, [filterMode])
 
 
 function handleDialogSubmit (e){
@@ -28,10 +27,8 @@ function handleDialogSubmit (e){
 
   else return +elem.price > +newObj.min && +elem.price < +newObj.max && [...objData.values()].includes("phone" + elem.brandId)
 }) 
-
-
   
-  fn(filtered)
+setPhones(filtered)
 
   e.target.reset()
 }

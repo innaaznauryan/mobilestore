@@ -1,33 +1,42 @@
+@import "../App.scss";
 
 // Button styles 
-
-.link, button{
+.link{
     display: inline-block;
     text-decoration: none;
     padding: 10px;
-    color: cadetblue;
+    color: $dark-color;
     transition: .5s;
+    svg{
+        vertical-align: middle;
+    }
+    span{
+        vertical-align: middle;
+    }
     &:hover {
         cursor: pointer;
-        color: rgb(200, 200, 200);
+        color: $main-color;
     }
 }
 button {
+    padding: 10px;
     border-radius: 5px;
     border: 0;
+    background-color: $dark-color;
+    color: $main-color;
+    transition: .5s;
     &:hover {
-        color: #f6f6f6;
-        background-color: cadetblue;
+        cursor: pointer;
+        background-color: $main-color;
+        color: $dark-color;
     }
 }
 
 // Aside 
-
 aside {
     height: 100vh;
-    position: fixed;
     width: 200px;
-    background-color: rgb(200, 200, 200);
+    position: fixed;
     z-index: 3;
     top: 0;
     display: flex;
@@ -35,9 +44,19 @@ aside {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+    padding: 10px;
+    background-color: $main-color;
+
+    .searchbtn{
+        background-color: $gray-color;
+        &:hover{
+            background-color: $dark-color;
+            color: $main-color;
+        }
+    }
 
     h3 {
-        color: darkcyan;
+        color: $gray-color;
         &:hover {
             cursor: pointer;
         }
@@ -45,7 +64,7 @@ aside {
 
     .acc {
         --h: 160px;
-        background-color: darkcyan;
+        background-color: $gray-color;
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -55,7 +74,7 @@ aside {
         height: var(--h);
         p{
             text-align: center;
-            color: rgb(200, 200, 200);
+            color: $main-color;
         }
     }
     .acc.open {
@@ -65,13 +84,11 @@ aside {
 }
 
 // Nav style 
-
 nav {
     height: 10vmin;
     padding-inline: 30px;
-    border-bottom: 1px solid #c9c9c9;
     margin-bottom: 20px;
-    background-color: #f6f6f6;
+    background-color: $dark-color;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -95,12 +112,12 @@ ul {
 
     a {
         text-decoration: none;
-        color: #242424;
+        color: $gray-color;
         font-size: clamp(10px, 3vw, 20px);
+        font-weight: 700;
         transition: .5s;
         &.active {
-            font-weight: 700;
-            color: cadetblue;
+            color: $main-color;
         }
     }
 }
@@ -110,56 +127,49 @@ ul {
     svg {
         height: 100%;
         font-size: 18px;
-        color: #242424;
+        color: $gray-color;
         transition: .5s;
         &:hover {
-            color: cadetblue;
+            color: $main-color;
         }
     }
     .add {
         position: absolute;
         top: -6vmin;
-        right: -3vmin;
+        right: -2vmin;
         font-size: 3vmin;
-        color: cadetblue;
-        background-color: rgb(200, 200, 200);
-        width: 3vmin;
-        height: 3vmin;
-        border-radius: 50%;
-        display: grid;
-        place-content: center;
+        color: $main-color;
     }
 }
 .dialogCart {
-    border: 1px solid cadetblue;
+    border: 1px solid $main-color;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
     border-radius: 10px;
     p {
-        color: cadetblue;
+        color: $main-color;
         font-size: 20px;
     }
     svg {
         font-size: 50px;
         path {
-            stroke: cadetblue;
+            stroke: $main-color;
         }
     }
 }
 
 // Login and signup BUTTONS 
-
 .loginDiv {
     position: fixed;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 1px solid cadetblue;
+    border: 1px solid $main-color;
     font-size: 20px;
     font-weight: 600;
-    color: cadetblue;
+    color: $main-color;
     top: 12vmin;
     right: 15px;
     display: grid;
@@ -167,32 +177,17 @@ ul {
     text-align: center;
     z-index: 6;
     backdrop-filter: blur(10px);
-    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.564);
+    box-shadow: -2px 2px 3px 0 $dark-color;
 }
 .singupDiv {
     top: calc(12vmin + 70px)
 }
 
 // Login and Signup Component styles
-
 .intro {
     text-align: center;
     margin: 20px;
-    color: cadetblue;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    input {
-        padding: 10px;
-        border-radius: 5px;
-        outline: 0;
-        border: 1px solid;
-        width: 200px;
-    }
+    color: $main-color;
 }
 .wrongUser {
     text-align: center;

@@ -8,8 +8,8 @@ return (
     <img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="phone" />
     <div className="bottom">
         <p className="year">Model year: {year}</p>
+        <p>Price: {price} ֏</p>
         <PhoneRating id={id}/>
-        <p>Price: ${price}</p>
     </div>
 </>
 )

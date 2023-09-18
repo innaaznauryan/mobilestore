@@ -1,17 +1,20 @@
+@import "../App.scss";
+
 .cartComponent {
     text-align: center;
     .empty {
-        color: cadetblue;
+        color: $main-color;
         font-size: 100px;
         margin: 20px;
     }
     p {
         font-size: 20px;
-        color: cadetblue;
+        color: $main-color;
     }
     table {
         display: inline-block;
         margin: 20px;
+        color: $dark-color;
         img {
             width: 50px;
         }
@@ -25,14 +28,11 @@
             padding: 10px 20px;
         }
         th {
-            color: cadetblue;
-        }
-        tbody td:first-of-type {
-            color: cadetblue;
+            color: $main-color;
         }
         tfoot {
             tr {
-                color: cadetblue;
+                color: $main-color;
                 font-weight: 600;
             }
             td:first-of-type {

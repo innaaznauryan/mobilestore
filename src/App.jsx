@@ -9,6 +9,7 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Error from './components/Error'
 import Cart from "./components/Cart"
+import "./App.scss"
 
 
 const App = () => {

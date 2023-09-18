@@ -1,6 +1,8 @@
+@import "../App.scss";
+
 .greet {
     text-align: center;
-    color: cadetblue;
+    color: $main-color;
     font-size: 20px;
     margin-left: 200px;
 }
@@ -17,24 +19,24 @@
     }
     
     .phone {
-        margin: auto;
-        width: 100%;
         padding: 18px 25px;
-        box-shadow: 0 0 3px 0 rgb(132, 131, 131);
+        width: 100%;
+        background-color: white;
+        color: $gray-color;
+        box-shadow: 0 0 3px 0 $main-color;
         border-radius: 20px 0px 20px 20px;
         display: grid;
         place-content: center;
-        place-items: center;
         position: relative;
         transition: .5s;
 
         &:hover {
-            box-shadow: 0 0 10px 0 rgb(132, 131, 131);
+            box-shadow: 0 0 10px 0 $main-color;
             h4 {
-                background-color: cadetblue;
+                background-color: $main-color;
             }
-            h2 {
-                color: cadetblue;
+            h2, .bottom, .star svg, .avgRating{
+                color: $main-color;
             }
         } 
 
@@ -46,8 +48,8 @@
             position: absolute;
             top: 0;
             right: 0;
-            background-color: #f6f6f6;
-            color: #242424;
+            background-color: $dark-color;
+            color: $gray-color;
             width: 50%;
             text-align: right;
             border-bottom-left-radius: 50px;
@@ -59,7 +61,7 @@
         h2 {
             margin-block: 20px 8px;
             font-size: 18px;
-            color: rgb(132, 131, 131);
+            color: $gray-color;
             transition: .5s;
         }
 
@@ -67,7 +69,8 @@
             display: grid;
             place-content: center;
             place-items: center;
-            color: cadetblue;
+            color: $gray-color;
+            transition: .5s;
         }
     }
 }
@@ -78,8 +81,9 @@
 .star {
     svg {
         pointer-events: none;
-        color: cadetblue;
         height: 100%;
+        color: $gray-color;
+        transition: .5s;
     }
     &:hover{
         cursor: pointer;
@@ -91,14 +95,7 @@
     }
 }
 .avgRating {
-    color: cadetblue;
     font-size: 20px;
+    color: $gray-color;
+    transition: .5s;
 }
-
-
-
-// dialog > form {
-//     input:not([type='checkbox']) {
-//         display: block;
-//     }
-// }

@@ -1,16 +1,19 @@
+@import "../App.scss";
+
 .single {
-    position: relative;
-    max-width: 440px;
+    max-width: 450px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px 0;
+    text-align: center;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 3px 0 rgb(132, 131, 131);
+    box-shadow: 0 0 3px 0 $main-color;
     img {
-        width: 400px;
+        width: 300px;
         aspect-ratio: 1;
     }
     h1 {
-        color: cadetblue;
+        color: $main-color;
     }
     .links {
         text-align: center;
@@ -27,7 +30,7 @@
             text-align: center;
         }
         h2, h5 {
-            color: cadetblue;
+            color: $main-color;
         }
     }
 
@@ -35,30 +38,10 @@
         text-align: center;
         margin: 10px 0;
         svg {
-            vertical-align: bottom;
+            vertical-align: middle;
         }
-    }
-}
-
-.pic-Container {
-    width: 600px;
-    padding-top: 80px;
-    overflow: hidden;
-    position: absolute;
-    left: -80px;
-    .wrapper {
-        display: flex;
-        transition: .5s;
-        img {
-        width: 200px;
-        aspect-ratio: 1;
-        transition: .5s;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-        .selected {
-            transform: translateY(-40px);
+        span{
+            vertical-align: middle;
         }
     }
 }

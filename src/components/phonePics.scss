@@ -1,0 +1,42 @@
+@import "../App.scss";
+
+.arrows{
+    width: fit-content;
+    position: relative;
+    left: -20px;
+    svg{
+        font-size: 30px;
+        margin: 0 10px;
+        color: $dark-color;
+        transition: .5s;
+        position: absolute;
+        top: 50%;
+        &:hover{
+            cursor: pointer;
+            color: $main-color;
+        }
+        &.right{
+            left: 100%;
+        }
+        &.left{
+            right: 100%;
+        }
+    }
+    .pic-container {
+        width: 450px;
+        padding-top: 40px;
+        overflow: hidden;
+        .wrapper {
+            display: flex;
+            transition: .5s;
+            img {
+            width: 150px;
+            aspect-ratio: 1;
+            transition: .5s;
+            }
+            .selected {
+                transform: translateY(-40px);
+            }
+        }
+    }
+}

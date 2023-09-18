@@ -1,47 +1,44 @@
-import { useState, useRef } from 'react'
+import {useState, useEffect} from 'react'
 import {useLocation} from 'react-router-dom'
-import { useDispatch } from "react-redux"
+import {useDispatch} from "react-redux"
 import {displayPhone} from "./redux/phoneSlice"
 import data from "../assets/sources/storage.json"
+import {BiSolidLeftArrow, BiSolidRightArrow} from "react-icons/bi"
+import "./phonePics.scss"
 
 const PhonePics = () => {
   const {id, brand} = useLocation().state
-  const [currentPics, setCurrentPics] = useState(() => data.filter(elem => elem.brand == brand))
-  const [active, setActive] = useState(() => currentPics.findIndex(elem => elem.id == id))
-  const divRef = useRef(null)
-
   const d = useDispatch()
 
-  const handleClick = (id, index) => {
-    const array = [...currentPics]
-    d(displayPhone((currentPics.find(elem => elem.id == id).image)))
-    
-    if(index == currentPics.length - 1) {
-      array.push(array.shift())
-      setCurrentPics(array)
-      const styles = divRef.current.style.transform
-      const value = styles.split("(")[1].split(")")[0]
-      const translateX = parseFloat(value)
-      console.log(translateX)
+  const [currentPics, setCurrentPics] = useState(() => data.filter(elem => elem.brand == brand))
+  const [currentIndex, setCurrentIndex] = useState(() => currentPics.findIndex(elem => elem.id == id))
 
-      divRef.current.style.transform = `translateX(${translateX - 200}px)`
-    }
-    else if (index == 0) {
-      array.unshift(array.pop())
-      setCurrentPics(array)
-    }
-    else {
-      setActive(index)
+  useEffect(() => {
+    d(displayPhone((currentPics[currentIndex].image)))
+  }, [currentIndex])
+
+  const handleClick = (dir) => {
+    switch (dir) {
+      case "left":
+        setCurrentIndex(prev => (prev - 1 + currentPics.length) % currentPics.length)
+        break
+      case "right":
+        setCurrentIndex(prev => (prev + 1) % currentPics.length)
+        break
     }
   }
 
   return (
-    <div className='pic-Container'>
-        <div ref={divRef} className="wrapper" style={{transform: `translate(${200 - active * 200}px)`}}>
-          {currentPics.map(({id, brand, image}, index) => {
-            return <img onClick={() => handleClick(id, index)} className={active == index ? "selected" : ""} key={id} src={`/public/Phones_Data_Storage/images/${brand}/${image}`} alt="pic" />
-          })}
-        </div>
+    <div className="arrows">
+      <BiSolidLeftArrow className="left" onClick={() => handleClick("left")}/>
+      <div className='pic-container'>
+          <div className="wrapper" style={{transform: `translateX(${150 - currentIndex * 150}px)`}}>
+            {currentPics.map(({id, brand, image}, index) => {
+              return <img className={currentIndex == index ? "selected" : ""} key={id} src={`/public/Phones_Data_Storage/images/${brand}/${image}`} alt="pic" />
+            })}
+          </div>
+      </div>
+      <BiSolidRightArrow className="right" onClick={() => handleClick("right")}/>
     </div>
   )
 }
