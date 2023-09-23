@@ -40,7 +40,7 @@ const PhoneInfo = () => {
 <div className='info'>
         
   <p>Description: {description}</p>
-  <span>{year}</span>
+  <p>{year}</p>
   <h2>{model}</h2>
   <h5>{price} ֏</h5>
   <Rating id={id} state={state} />

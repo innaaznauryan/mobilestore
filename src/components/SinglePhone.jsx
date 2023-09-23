@@ -25,9 +25,9 @@ const SinglePhone = () => {
           <BsArrowLeftShort/> 
           <span>Go back</span>
         </Link>
-        <br />
+        <hr />
         {phone.image ? (<img src={`/Phones_Data_Storage/images/${brand}/${phone.image}`} alt="" />) : (<img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />)}
-
+        <hr />
         <div className="links">
           <Link className="link" state={customState} to=".">Info </Link> 
           <Link className="link" state={customState} to="pics">Pics</Link>

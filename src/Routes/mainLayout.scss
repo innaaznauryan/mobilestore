@@ -74,17 +74,21 @@ nav {
     background-color: $dark-color;
     display: flex;
     justify-content: space-between;
+    text-align: center;
     position: relative;
     z-index: 5;
     > a > img {
-        height: 100%; 
+        height: 100% 
+    }
+    > a {
+        width: 20%;
     }
 }
 .menu{
     li {
         list-style-type: none;
         width: 100px;
-        text-align: center;
+        // text-align: center;
     }
     a {
         text-decoration: none;
@@ -108,10 +112,13 @@ nav {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    // text-align: center;
 }
 .iconMenu{
     display: none;
     position: relative;
+    width: 60%;
+    // text-align: center;
     ul{
         position: absolute;
         top: 10vmin;
@@ -139,7 +146,7 @@ nav {
     .added {
         position: absolute;
         top: -6vmin;
-        right: -3vmin;
+        right: -2vmin;
         font-size: 3vmin;
         color: $main-color;
     }
@@ -152,6 +159,10 @@ svg {
     &:hover {
         color: $main-color;
     }
+}
+.cartMenu {
+    width: 20%;
+    // text-align: center;
 }
 
 @media (max-width:768px) {

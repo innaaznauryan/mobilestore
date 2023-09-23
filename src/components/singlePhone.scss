@@ -4,10 +4,10 @@
     max-width: 450px;
     margin: 0 auto;
     padding: 20px 20px 0;
-    text-align: center;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 3px 0 $main-color;
+    text-align: center;
     img {
         width: 300px;
         aspect-ratio: 1;
@@ -15,11 +15,12 @@
     h1 {
         color: $main-color;
     }
+    hr{
+        border: 1px solid $main-color;
+    }
     .links {
-        text-align: center;
         font-size: 18px;
     }
-
     .info {
         display: flex;
         flex-direction: column;
@@ -27,7 +28,7 @@
         align-items: center;
         gap: 10px;
         p {
-            text-align: center;
+            color: $dark-color;
         }
         h2, h5 {
             color: $main-color;
@@ -36,13 +37,18 @@
 }
 
 .cartDiv {
-    text-align: center;
     margin: 10px 0;
-    button svg {
-        vertical-align: middle;
-    }
-    span{
-        vertical-align: middle;
+    button {
+        svg{
+            vertical-align: middle;
+            color: $main-color;
+        }
+        span{
+            vertical-align: middle;
+        }
+        &:hover svg{
+            color: $dark-color;
+        }
     }
 }
 .dialogCart {
@@ -74,7 +80,6 @@
 @media (max-width:768px) {
     .single{
         translate: 0;
-        // margin-bottom: 20px;
     }
 }
 @media (max-width: 600px) {

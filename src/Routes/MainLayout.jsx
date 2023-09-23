@@ -40,7 +40,7 @@ return (
           </ul>
         </div>
 
-        <div>{login.name && 
+        <div className="cartMenu">{login.name && 
           <Link to="/cart" className="cart">
             <BsFillCartFill />
             {cart.length == 0 ? null : <div className="added">{cart.length}</div>}
