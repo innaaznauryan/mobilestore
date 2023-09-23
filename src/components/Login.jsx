@@ -30,15 +30,15 @@ const Login = () => {
   }
 
   return (
-<>
+<main>
     <div className='intro'>Have an account? Sign in!</div>
     <form action="" onSubmit={handleSubmit} className='loginForm'>
       <input name='login' type="text" placeholder='Login'/>
       <input name='password' type="password" placeholder='Password'/>
       <button type="submit">Sign in</button>
     </form>
-    {wrongUser && <div className='wrongUser'>Wrong Login or Password!</div>}
-</>
+    <div className='wrongUser'>{wrongUser ? "Wrong Login or Password!" : ""}</div>
+</main>
 )
 }
 

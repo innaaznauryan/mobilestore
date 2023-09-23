@@ -1,5 +1,5 @@
 import {useRef, useEffect} from 'react'
-import "./filter.style.scss"
+import "./filter.scss"
 
 const Filter = ({setPhones, data, filterMode, setFilterMode}) => {
 

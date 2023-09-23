@@ -1,4 +1,4 @@
-import PhoneRating from "./PhoneRating"
+import Rating from "./Rating"
 
 const PhoneComponent = ({id, brand, image, model, price, quantity, year}) => {
 return (
@@ -9,7 +9,7 @@ return (
     <div className="bottom">
         <p className="year">Model year: {year}</p>
         <p>Price: {price} ֏</p>
-        <PhoneRating id={id}/>
+        <Rating id={id}/>
     </div>
 </>
 )

@@ -23,7 +23,7 @@
         width: 100%;
         background-color: white;
         color: $gray-color;
-        box-shadow: 0 0 3px 0 $main-color;
+        box-shadow: 0 0 5px 0 $main-color;
         border-radius: 20px 0px 20px 20px;
         display: grid;
         place-content: center;
@@ -31,11 +31,11 @@
         transition: .5s;
 
         &:hover {
-            box-shadow: 0 0 10px 0 $main-color;
+            box-shadow: 0 0 20px 0 $main-color;
             h4 {
                 background-color: $main-color;
             }
-            h2, .bottom, .star svg, .avgRating{
+            h2 {
                 color: $main-color;
             }
         } 
@@ -75,27 +75,11 @@
     }
 }
 
-
-// RATING 
-
-.star {
-    svg {
-        pointer-events: none;
-        height: 100%;
-        color: $gray-color;
-        transition: .5s;
+@media (max-width: 768px) {
+    .phone-container{
+        margin: 50px 20px auto;
     }
-    &:hover{
-        cursor: pointer;
+    .greet{
+        margin: 0;
     }
-}
-.selected {
-    svg {
-        color: orange;
-    }
-}
-.avgRating {
-    font-size: 20px;
-    color: $gray-color;
-    transition: .5s;
 }

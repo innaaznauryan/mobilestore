@@ -1,6 +1,6 @@
 // COLORS 
 $dark-color: #112d32;
-$gray-color: #254e58;
+$gray-color: #345e6b;
 $main-color: #88bdbc;
 
 *{
@@ -10,8 +10,19 @@ $main-color: #88bdbc;
 }
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: $gray-color;
 }
+main{
+    padding: 20px 0;
+    background-color: $gray-color;
+    min-height: calc(100vh - 10vmin);
+}
+
+@media (max-width: 768px) {
+    main{
+        min-height: calc(60vh - 10vmin);
+    }
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -26,5 +37,36 @@ form {
         width: 200px;
         background-color: $dark-color;
         color: $main-color;
+    }
+}
+
+.link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: $dark-color;
+    transition: .5s;
+    svg{
+        vertical-align: middle;
+    }
+    span{
+        vertical-align: middle;
+    }
+    &:hover {
+        cursor: pointer;
+        color: $main-color;
+    }
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: $dark-color;
+    color: $main-color;
+    transition: .5s;
+    &:hover {
+        cursor: pointer;
+        background-color: $main-color;
+        color: $dark-color;
     }
 }

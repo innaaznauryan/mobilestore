@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {AiFillStar} from "react-icons/ai"
+import "./rating.scss"
 
-const PhoneRating = ({id}) => {
+const PhoneRating = ({id, state}) => {
 
     const localStorageFunc = () => {
         for (let i = 0; i < localStorage.length; i++) {
@@ -15,6 +16,7 @@ const PhoneRating = ({id}) => {
     const [average, setAverage] = useState(0)
 
     const handleClick = (e) => {
+        if(!state) return
         let num = e.target.dataset.rateid
         setRateSum(rateSum + num)
         localStorage.setItem("phone" + id, rateSum + num)

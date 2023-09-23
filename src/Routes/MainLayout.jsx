@@ -3,9 +3,11 @@ import {useLocation, Outlet, NavLink, Link} from "react-router-dom"
 import {useSelector} from "react-redux"
 import AboutUs from "./Info/AboutUs"
 import OurValues from "./Info/OurValues"
+import NavMenu from "./NavMenu"
 import {BsFillCartFill} from "react-icons/bs"
+import {AiOutlineMenu} from "react-icons/ai"
 import logo from "../assets/Logo.png"
-import "./mainLayout.style.scss"
+import "./mainLayout.scss"
 
 
 const MainLayout = () => {
@@ -27,28 +29,21 @@ return (
     <nav>
         <Link to="/"><img src={logo} alt="" /></Link>
         
-        <ul>
-          <li>
-            <NavLink className={({isActive})=> isActive? "active" : ""} to="products/phone4">Iphone</NavLink>
-          </li>
-        <li>
-          <NavLink className={({isActive})=> isActive? "active" : ""} to="products/phone1">Samsung</NavLink>
-        </li>
-        <li>
-          <NavLink className={({isActive})=> isActive? "active" : ""} to="products/phone2">Xiaomi</NavLink>
-        </li>
-        <li>
-          <NavLink className={({isActive})=> isActive? "active" : ""} to="products/phone5">Nokia</NavLink>
-        </li>
-        <li>
-          <NavLink className={({isActive})=> isActive? "active" : ""} to="products/phone3">Motorola</NavLink>
-        </li>
+        <ul className="menu largeMenu">
+          <NavMenu/>
         </ul>
+
+        <div className="iconMenu">
+          <a href=""><AiOutlineMenu/></a>
+          <ul className="menu">
+            <NavMenu/>
+          </ul>
+        </div>
 
         <div>{login.name && 
           <Link to="/cart" className="cart">
             <BsFillCartFill />
-            {cart.length == 0 ? null : <div className="add">{cart.length}</div>}
+            {cart.length == 0 ? null : <div className="added">{cart.length}</div>}
           </Link>}
         </div>
     </nav>

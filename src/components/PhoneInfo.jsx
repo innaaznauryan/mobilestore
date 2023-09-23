@@ -1,15 +1,16 @@
-import {useEffect, useRef} from "react"
+import {useEffect, useRef, useState} from "react"
 import {useOutletContext} from 'react-router-dom'
 import {useDispatch, useSelector} from "react-redux"
 import {displayPhone} from "./redux/phoneSlice"
 import {addToCart} from "./redux/cartSlice"
-import PhoneRating from "./PhoneRating"
+import Rating from "./Rating"
 import {BsFillCartFill} from "react-icons/bs"
 import {GrStatusGood} from "react-icons/gr"
 
 const PhoneInfo = () => {
 
   const {description, id, brand, image, model, price, quantity, year} = useOutletContext()
+  const [state, setState] = useState(false)
   const d = useDispatch()
   const login = useSelector(state => state.login)
   const cart = useSelector(state => state.cart)
@@ -17,6 +18,8 @@ const PhoneInfo = () => {
 
   useEffect(() => {
     d(displayPhone(null))
+    setState(true)
+    return () => setState(false)
   }, [])
 
   useEffect(() => {
@@ -40,7 +43,7 @@ const PhoneInfo = () => {
   <span>{year}</span>
   <h2>{model}</h2>
   <h5>{price} ֏</h5>
-  <PhoneRating id={id}/>
+  <Rating id={id} state={state} />
   <div className="cartDiv">{login.name && 
     <button onClick={handleClick}>
       <BsFillCartFill /> 

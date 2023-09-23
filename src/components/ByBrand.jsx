@@ -2,24 +2,14 @@ import {useParams, Link} from "react-router-dom"
 import data from "../assets/sources/storage.json"
 import PhoneComponent from "./PhoneComponent"
 import {BsArrowLeftShort} from "react-icons/bs"
-import "./bBrand.style.scss"
-
-// const init = () => {
-//   const obj = {}
-//   for (let i = 0; i < localStorage.length; i++) {
-//     const key = localStorage.key(i)
-//     const value = +localStorage.getItem(key)
-//     if (key.startsWith("phoneid")) obj[key] = value
-//   }
-//   return obj
-// }
+import "./byBrand.scss"
 
 const ByBrand = () => {
 
 const {brand} = useParams()
 
 return (
-<>
+<main>
 
 <Link className="goback link" to="/">
   <BsArrowLeftShort/>
@@ -36,7 +26,7 @@ return (
     </div>
     })}
   </div>
-</>
+</main>
   )
 }
 

@@ -1,0 +1,41 @@
+@import "../App.scss";
+
+.cartComponent {
+    text-align: center;
+    .empty {
+        color: $main-color;
+        font-size: 100px;
+        margin: 20px;
+    }
+    p {
+        font-size: 20px;
+        margin: 30px;
+        color: $main-color;
+    }
+}
+.item{
+    display: grid;
+    grid-template-columns: 40px 100px 170px 40px;
+    place-content: center;
+    margin: 20px;
+    .order{
+        display: grid;
+        place-content: center;
+    }
+    .image img {
+        width: 90%;
+        background-color: white;
+    }
+    .desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: $dark-color;
+    }
+    .delete svg {
+        color: $main-color;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

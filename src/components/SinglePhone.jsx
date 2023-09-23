@@ -3,7 +3,7 @@ import {useLocation, Link, Outlet} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
 import {displayPhone} from "./redux/phoneSlice"
 import {BsArrowLeftShort} from "react-icons/bs"
-import "./singlePhone.style.scss"
+import "./singlePhone.scss"
 
 const SinglePhone = () => {
 
@@ -18,6 +18,7 @@ const SinglePhone = () => {
   }, [])
 
   return (
+    <main>
     <div className="single">
         <h1>{brand}</h1>
         <Link className="link" relative="path" to=".." state={customState}>
@@ -34,6 +35,7 @@ const SinglePhone = () => {
         <Outlet context={{description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tenetur voluptate eius. Inventore quidem delectus cum at, officia quas iure tempore deserunt, id accusamus deleniti vitae ex recusandae, numquam distinctio.", id, brand, image, model, price, quantity, year}}/>
 
     </div>
+    </main>
   )
 }
 

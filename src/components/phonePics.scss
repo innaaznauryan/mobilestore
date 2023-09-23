@@ -10,7 +10,7 @@
         color: $dark-color;
         transition: .5s;
         position: absolute;
-        top: 50%;
+        top: 0;
         &:hover{
             cursor: pointer;
             color: $main-color;
@@ -36,6 +36,19 @@
             }
             .selected {
                 transform: translateY(-40px);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .arrows {
+        left: 0;
+        .pic-container {
+            width: 300px;
+            .wrapper img{
+                width: 100px;
             }
         }
     }

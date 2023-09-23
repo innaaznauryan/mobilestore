@@ -4,7 +4,7 @@ import {removeCart} from "./redux/cartSlice"
 import {BsCartXFill} from "react-icons/bs"
 import {GrStatusGood} from "react-icons/gr"
 import {AiFillDelete} from "react-icons/ai"
-import "./cart.style.scss"
+import "./cart.scss"
 
 const Cart = () => {
 
@@ -36,57 +36,45 @@ const Cart = () => {
   }
 
   return (
+  <main>
   <div className='cartComponent'>
     {
       cart.length == 0 ? 
-      <div>
+      <>
         <BsCartXFill className='empty'/>
         <p>Your cart is empty!</p>
-      </div> : 
-      <div>
+      </> : 
+      <>
         <p>You have {cart.length} item{cart.length > 1 ? "s" : ""} in your cart</p>
-        <table>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Image</th>
-              <th>Brand</th>
-              <th>Model</th>
-              <th>Year</th>
-              <th>Price</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {cart.map(({id, image, brand, model, price, year}, index) => {
-              return <tr key={id}>
-                <td>{index + 1}</td>
-                <td><img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="phone" /></td>
-                <td>{brand}</td>
-                <td>{model}</td>
-                <td>{year}</td>
-                <td>֏ {price}</td>
-                <th>{<AiFillDelete onClick={() => handleDelete(id)} className='delete'/>}</th>
-              </tr>
+
+            {cart.map(({id, image, brand, model, price}, index) => {
+              return <div className="item">
+                <div className='order'>{index + 1}</div>
+                <div className="image">
+                  <img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="phone"/>
+                </div>
+                <div className="desc">
+                  <span>Brand: {brand}</span>
+                  <span>Model: {model}</span>
+                  <span>Price: {price} ֏</span>
+                </div>
+                <div className="delete">
+                  <AiFillDelete onClick={() => handleDelete(id)}/>
+                </div>
+              </div>
             })}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={5}>Total:</td>
-              <td>֏ {cart.reduce((acc, elem) => +acc + +elem.price, 0)}</td>
-            </tr>
-          </tfoot>
-        </table>
-        <br />
+            <p>Total: {cart.reduce((acc, elem) => +acc + +elem.price, 0)} ֏</p>
+
         <button onClick={handleClick}>Check out</button>
         <dialog ref={dialogRef} className="dialogCart">
           <GrStatusGood />
           <p>Your order has been placed!</p>
           <p>Thank you for shopping with us!</p>
         </dialog>
-      </div>
+      </>
     }
   </div>
+  </main>
   )
 }
 

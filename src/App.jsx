@@ -19,7 +19,7 @@ const App = () => {
 
   return (
   
-    <main>
+    <>
 
 
 
@@ -45,7 +45,7 @@ const App = () => {
     
     
     
-    </main>
+    </>
     
     
   )

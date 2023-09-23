@@ -1,0 +1,23 @@
+@import "../App.scss";
+
+.star {
+    svg {
+        pointer-events: none;
+        height: 100%;
+        color: $gray-color;
+        transition: .5s;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+.selected {
+    svg {
+        color: orange;
+    }
+}
+.avgRating {
+    font-size: 20px;
+    color: $gray-color;
+    transition: .5s;
+}
