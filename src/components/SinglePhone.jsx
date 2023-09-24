@@ -2,7 +2,6 @@ import {useEffect} from "react"
 import {useLocation, Link, Outlet} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
 import {displayPhone} from "./redux/phoneSlice"
-import {BsArrowLeftShort} from "react-icons/bs"
 import "./singlePhone.scss"
 
 const SinglePhone = () => {

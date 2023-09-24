@@ -6,7 +6,7 @@ import OurValues from "./Info/OurValues"
 import NavMenu from "./NavMenu"
 import {BsFillCartFill} from "react-icons/bs"
 import {AiOutlineMenu} from "react-icons/ai"
-import logo from "../assets/Logo.png"
+import logo from "/Logo.png"
 import "./mainLayout.scss"
 
 
