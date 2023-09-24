@@ -16,7 +16,7 @@ const PhoneRating = ({id, state}) => {
     const [average, setAverage] = useState(0)
 
     const handleClick = (e) => {
-        if(!state) return
+        if(!state || !e.target.classList.contains("star")) return
         let num = e.target.dataset.rateid
         setRateSum(rateSum + num)
         localStorage.setItem("phone" + id, rateSum + num)

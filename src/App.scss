@@ -16,13 +16,12 @@ main{
     background-color: $gray-color;
     min-height: calc(100vh - 10vmin);
 }
-
-@media (max-width: 768px) {
-    main{
-        min-height: calc(60vh - 10vmin);
-    }
+img, h1, h3, h4, h6, a, span, input, button{
+    user-select: none;
 }
-
+::selection{
+    background-color: $main-color;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -68,5 +67,11 @@ button {
         cursor: pointer;
         background-color: $main-color;
         color: $dark-color;
+    }
+}
+
+@media (max-width: 768px) {
+    main{
+        min-height: calc(60vh - 10vmin);
     }
 }

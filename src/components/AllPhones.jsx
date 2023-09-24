@@ -8,7 +8,7 @@ import "./allphones.scss"
 
 const AllPhones = () => {
 
-const [phones, setPhones] = useState(data.sort(()=> Math.random() - 0.5))
+const [phones, setPhones] = useState(() => data)
 const login = useSelector(state => state.login)
 const signup = useSelector(state => state.signup)
 const {filterMode, setFilterMode} = useOutletContext()

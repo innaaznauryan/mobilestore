@@ -1,5 +1,5 @@
-import {useState} from "react"
-import {useLocation, Outlet, NavLink, Link} from "react-router-dom"
+import {useEffect, useState} from "react"
+import {useLocation, Outlet, Link, useParams} from "react-router-dom"
 import {useSelector} from "react-redux"
 import AboutUs from "./Info/AboutUs"
 import OurValues from "./Info/OurValues"
@@ -15,7 +15,14 @@ const MainLayout = () => {
   const login = useSelector(state => state.login)
   const cart = useSelector(state => state.cart)
   const [filterMode, setFilterMode] = useState(false)
+  const [toggle, setToggle] = useState(false)
   const location = useLocation()
+
+  const toggleMenu = () => setToggle(!toggle)
+
+  useEffect(() => {
+    setToggle(false)
+  }, [location])
 
 return (
 <>
@@ -34,8 +41,8 @@ return (
         </ul>
 
         <div className="iconMenu">
-          <a href=""><AiOutlineMenu/></a>
-          <ul className="menu">
+          <AiOutlineMenu onClick={toggleMenu}/>
+          <ul className={"menu" + (toggle ? " openMenu" : "")}>
             <NavMenu/>
           </ul>
         </div>

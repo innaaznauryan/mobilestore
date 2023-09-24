@@ -40,8 +40,8 @@ setPhones(filtered)
     <form onSubmit={handleDialogSubmit} action="" method="dialog">
 
 
-    <input type="number" name='min' placeholder='Min' />
-    <input type="number" name='max' placeholder='Max' />
+    <input type="number" name='min' placeholder='Min Price' />
+    <input type="number" name='max' placeholder='Max Price' />
 
     <div className="phoneDiv">
           <label htmlFor="phone1">Samsung</label>

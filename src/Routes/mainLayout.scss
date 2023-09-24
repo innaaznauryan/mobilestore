@@ -88,7 +88,6 @@ nav {
     li {
         list-style-type: none;
         width: 100px;
-        // text-align: center;
     }
     a {
         text-decoration: none;
@@ -112,14 +111,12 @@ nav {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    // text-align: center;
 }
 .iconMenu{
     display: none;
     position: relative;
     width: 60%;
-    // text-align: center;
-    ul{
+    .menu{
         position: absolute;
         top: 10vmin;
         left: 50%;
@@ -135,7 +132,7 @@ nav {
             margin: 20px 60px;
         }
     }
-    &:hover ul{
+    .openMenu{
         transform: rotateX(0);
         visibility: visible;
         opacity: 1;
@@ -158,11 +155,11 @@ svg {
     transition: .5s;
     &:hover {
         color: $main-color;
+        cursor: pointer;
     }
 }
 .cartMenu {
     width: 20%;
-    // text-align: center;
 }
 
 @media (max-width:768px) {
