@@ -21,10 +21,7 @@ const SinglePhone = () => {
     <main>
     <div className="single">
         <h1>{brand}</h1>
-        <Link className="link" relative="path" to=".." state={customState}>
-          <BsArrowLeftShort/> 
-          <span>Go back</span>
-        </Link>
+        <Link className="link" relative="path" to=".." state={customState}>Go back</Link>
         <hr />
         {phone.image ? (<img src={`/Phones_Data_Storage/images/${brand}/${phone.image}`} alt="" />) : (<img src={`/Phones_Data_Storage/images/${brand}/${image}`} alt="" />)}
         <hr />

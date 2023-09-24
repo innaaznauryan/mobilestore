@@ -51,7 +51,7 @@ const PhoneInfo = () => {
     </button>}
     <dialog ref={dialogRef} className="dialogCart">
       <GrStatusGood />
-      <p>The item successfully added to cart!</p>
+      <p className="success">The item successfully added to cart!</p>
     </dialog>
   </div>
 
