@@ -3,12 +3,13 @@ This project is in production and available via the following link! [Mobile Stor
 
 The Mobile Store project is developed in React.js and features the following essential functionalities:
 - filtered search
-- sign-in and sign-up
 - intuitive slider
+- sign-in and sign-up
 - easy cart management and seamless checkout
-- route navigation that simplifies user experience
+- 5-star rating system
+- route navigation simplifying user experience
 
-I've used Redux.js for efficient state management and local storage for the database.  
+I've used Redux.js for efficient state management and local storage for database.  
 
 After cloning the repository, in the project root directory you can run  
 
